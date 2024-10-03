@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import tailyLogo from "../../public/taily_logo_s.svg"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { BarChart3, TrendingUp, DollarSign, CheckCircle, PieChart, LineChart, Zap, Clock, Database, Target, Briefcase, Rocket, Lightbulb, Users, Menu } from "lucide-react"
+import { BarChart3, TrendingUp, DollarSign, CheckCircle, PieChart, LineChart, Zap, Clock, Database, Target, Briefcase, Rocket, Lightbulb, Users, Menu, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Noto_Sans_JP } from 'next/font/google'
@@ -465,7 +465,7 @@ export default function TailyLandingPageJp() {
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
-                  { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
+                  { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行��ます。連携可能な店舗数は、ご契約のプランによって異なります。" },
                   { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                   { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
                   { question: "契約期間の縛りはありますか？", answer: "基本的に額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
@@ -514,13 +514,25 @@ export default function TailyLandingPageJp() {
           <div className="flex flex-col sm:flex-row justify-between items-center py-6">
             <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
             <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
-              <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
+              <Link 
+                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400 flex items-center" 
+                href="https://pandalab.jp/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 運営会社
+                <ExternalLink className="ml-1 w-3 h-3" />
               </Link>
-              <Link className="text-xs hover:underline underline-offset-4" href="#">
+              <Link 
+                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400" 
+                href="/tokushoho"
+              >
                 特定商取引法に基づく表記
               </Link>
-              <Link className="text-xs hover:underline underline-offset-4" href="#">
+              <Link 
+                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400" 
+                href="/privacy-policy"
+              >
                 プライバシーポリシー
               </Link>
             </nav>
