@@ -434,12 +434,12 @@ export default function TailyLandingPageJp() {
               ].map((plan, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full flex flex-col">
-                    <CardHeader className="p-6 md:p-8 pb-2">
+                    <CardHeader className="p-6 md:p-8 pb-0"> {/* pb-2 から pb-0 に変更 */}
                       <CardTitle className="text-2xl mb-1">{plan.title}</CardTitle>
                       <p className="text-3xl font-bold">{plan.price}</p>
                     </CardHeader>
-                    <CardContent className="p-6 md:p-8 pt-4 pb-0 flex-grow">
-                      <ul className="mt-2 space-y-3">
+                    <CardContent className="p-6 md:p-8 pt-4 flex-grow"> {/* pt-0 に変更 */}
+                      <ul className="mt-0 space-y-3"> {/* mt-2 から mt-0 に変更 */}
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
                             <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" />
@@ -499,7 +499,7 @@ export default function TailyLandingPageJp() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">お問い合わせ</h2>
-                <p className="mx-auto max-w-[700px] text-sm sm:text-base text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400 mb-8">
+                <p className="mx-auto max-w-[700px] text-sm sm:text-base text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400 mb-16">
                   tailyについてのご質問や導入のご相談は、お気軽にお問い合わせください。<br />
                   専門のメンバーが丁寧にご相談に乗らせていただきます。
                 </p>
