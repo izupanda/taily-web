@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-};
+  // appDir オプションを削除
+}
 
 export default nextConfig;

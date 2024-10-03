@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* その他のカスタムスタイル */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -70,8 +72,6 @@
 
 @layer components {
   .taily-vip-banner {
-    @apply text-sm font-semibold px-4 py-2 rounded-full inline-block mt-4;
-    color: theme('colors.blue.600');
-    background-color: theme('colors.blue.50');
+    @apply text-sm font-semibold px-4 py-2 rounded-full inline-block mt-4 text-blue-600 bg-blue-50;
   }
 }
