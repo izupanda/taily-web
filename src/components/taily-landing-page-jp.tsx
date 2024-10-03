@@ -4,7 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 
 
-import tailyLogo from "../../public/taily_logo_s.svg" 
+import tailyLogo from "../../public/taily_logo_s.svg"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BarChart3, TrendingUp, DollarSign, CheckCircle, PieChart, LineChart, Zap, Clock, Database, Target, Briefcase, Rocket, Lightbulb, Users, Menu } from "lucide-react"
@@ -31,7 +31,7 @@ export default function TailyLandingPageJp() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4 ${notoSansJP.className}">
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container ${notoSansJP.className}">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
@@ -498,20 +498,20 @@ export default function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t w-full">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <div className="max-w-6xl mx-auto">
-        <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
-            運営会社
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            特定商取引法に基づく表記
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            プライバシーポリシー
-          </Link>
-        </nav>
+          <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
+          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+            <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
+              運営会社
+            </Link>
+            <Link className="text-xs hover:underline underline-offset-4" href="#">
+              特定商取引法に基づく表記
+            </Link>
+            <Link className="text-xs hover:underline underline-offset-4" href="#">
+              プライバシーポリシー
+            </Link>
+          </nav>
         </div>
       </footer>
     </div>
