@@ -148,14 +148,12 @@ export function TailyLandingPageJp() {
                 <Button variant="outline">お問い合わせ</Button>
               </motion.div>
             </div>
-            <motion.div 
-              className="mt-12 flex justify-center relative"
-              variants={{
-                initial: { scale: 0.8, opacity: 0 },
-                animate: { scale: 1, opacity: 1 },
-                transition: { duration: 0.8, ease: "easeOut" }
-              }}
-            >
+            <motion.div
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  style={{ transition: '0.8s ease-out' }} // ここに変更
+>
+
               <div className="relative w-full max-w-4xl">
                 <Image
                   src="/placeholder.svg?height=400&width=800"
