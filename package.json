@@ -2,8 +2,9 @@
   "name": "202410_taily-teaserweb",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3004",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -18,9 +19,9 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.9.0",
     "lucide-react": "^0.438.0",
-    "next": "14.2.14",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^14.2.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },

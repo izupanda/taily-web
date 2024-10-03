@@ -2,6 +2,8 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
+
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BarChart3, TrendingUp, DollarSign, CheckCircle, PieChart, LineChart, Zap, Clock, Database, Target, Briefcase, Rocket, Lightbulb, Users, Menu } from "lucide-react"
@@ -9,7 +11,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-export function TailyLandingPageJp() {
+export default function TailyLandingPageJp() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const fadeInUp = {
