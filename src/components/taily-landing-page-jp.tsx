@@ -31,7 +31,7 @@ export default function TailyLandingPageJp() {
   }
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-gray-50 text-gray-900 font-sans container ${notoSansJP.className}">
+    <div className={`flex flex-col w-full min-h-screen bg-gray-50 text-gray-900 font-sans ${notoSansJP.className}`}>
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
@@ -109,14 +109,14 @@ export default function TailyLandingPageJp() {
           </div>
         </div>
       )}
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         <motion.section
           className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white"
           initial="initial"
           animate="animate"
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }} >
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <motion.div className="space-y-2" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -130,7 +130,7 @@ export default function TailyLandingPageJp() {
                   SKU別利益分析ツールです。データに基づいた意思決定で、
                   あなたのビジネスの成長と利益最大化をサポートします。
                 </p>
-                <p className="text-sm text-blue-600 font-semibold bg-blue-50 px-4 py-2 rounded-full inline-block mt-4">
+                <p className="text-sm text-blue-600 font-semibold bg-blue-50 px-4 py-2 rounded-full inline-block mt-4 taily-vip-banner">
                   2024年12月、EC業界に革命を起こす - 今すぐ先行予約でVIP特典をゲット！
                 </p>
               </motion.div>
@@ -155,7 +155,7 @@ export default function TailyLandingPageJp() {
                 />
               </div>
             </motion.div>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -166,7 +166,7 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyが解決する課題</h2>
             <motion.div
               className="flex justify-center mb-12"
@@ -197,7 +197,7 @@ export default function TailyLandingPageJp() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -208,7 +208,7 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyの主な機能</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -237,7 +237,7 @@ export default function TailyLandingPageJp() {
             <motion.p variants={fadeInUp} className="text-center mt-8 text-muted-foreground" transition={{ duration: 0.6 }}>
               煩わしいAPI連携は必要ありません。tailyが自動的にデータを収集し、分析します。
             </motion.p>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -248,7 +248,7 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyを導入することによる効果</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -306,7 +306,7 @@ export default function TailyLandingPageJp() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -317,7 +317,7 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">ご相談事例</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -364,7 +364,7 @@ export default function TailyLandingPageJp() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -375,7 +375,7 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">料金プラン</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -441,7 +441,7 @@ export default function TailyLandingPageJp() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -452,13 +452,13 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
                 { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かかります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                 { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
-                { question: "データのセキュリティは大丈夫です���？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
+                { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                 { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
                 { question: "契約期間の縛りはありますか？", answer: "基本的に月額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
               ].map((item, index) => (
@@ -468,7 +468,7 @@ export default function TailyLandingPageJp() {
                 </AccordionItem>
               ))}
             </Accordion>
-          </motion.div>
+          </div>
         </motion.section>
 
         <motion.section
@@ -479,7 +479,7 @@ export default function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <div className="container mx-auto px-4 md:px-6">
 
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -495,11 +495,11 @@ export default function TailyLandingPageJp() {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </motion.section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <div className="max-w-6xl mx-auto">
+      <footer className="w-full border-t bg-white">
+        <div className="container mx-auto flex flex-col gap-2 sm:flex-row py-6 items-center px-4 md:px-6">
           <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
             <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
