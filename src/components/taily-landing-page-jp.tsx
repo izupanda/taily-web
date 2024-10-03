@@ -176,7 +176,7 @@ export default function TailyLandingPageJp() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 { icon: Clock, title: "データ分析に時間がかかる", content: "膨大なデータをExcelで管理し、複数店舗からのデータ抽出や集計作業に多大な時間を費やしています。繰り返し作業による人的ミスも発生しやすく、効率的な分析が困難です。" },
-                { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡することができず、真の収益性が見えていません。" },
+                { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡するこ���ができず、真の収益性が見えていません。" },
                 { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益率を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続可能な成長が阻害されています。" },
                 { icon: Briefcase, title: "在庫管理の非効率", content: "SKU別の在庫回転率と利益の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
                 { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけでなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
@@ -277,7 +277,7 @@ export default function TailyLandingPageJp() {
                   title: "業務効率の改善",
                   content: "データ収集・分析の自動化により、従業員の作業時間が大幅に削減。戦略的タスクに注力できるようになります。平均して分析業務の時間が70%削減されています。",
                   details: [
-                    "データ収集・集計作業の自動化",
+                    "データ収集・集���作業の自動化",
                     "レポート作成時間の大幅削減",
                     "戦略立案や顧客対応への時間シフト"
                   ]
@@ -330,7 +330,7 @@ export default function TailyLandingPageJp() {
                 {
                   title: "アパレルEC / 売上高8億円",
                   tagline: "季節商品の在庫30%削減",
-                  content: "季節商品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
+                  content: "���節商品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
                   image: "/placeholder.svg?height=100&width=100"
                 },
                 {
@@ -499,19 +499,21 @@ export default function TailyLandingPageJp() {
         </motion.section>
       </main>
       <footer className="w-full border-t bg-white">
-        <div className="container mx-auto flex flex-col gap-2 sm:flex-row py-6 items-center px-4 md:px-6">
-          <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
-              運営会社
-            </Link>
-            <Link className="text-xs hover:underline underline-offset-4" href="#">
-              特定商取引法に基づく表記
-            </Link>
-            <Link className="text-xs hover:underline underline-offset-4" href="#">
-              プライバシーポリシー
-            </Link>
-          </nav>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center py-6">
+            <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
+            <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
+              <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
+                運営会社
+              </Link>
+              <Link className="text-xs hover:underline underline-offset-4" href="#">
+                特定商取引法に基づく表記
+              </Link>
+              <Link className="text-xs hover:underline underline-offset-4" href="#">
+                プライバシーポリシー
+              </Link>
+            </nav>
+          </div>
         </div>
       </footer>
     </div>
