@@ -27,34 +27,41 @@ export function TailyLandingPageJp() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4">
-          <div className="flex h-14 items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image src="/taily-logo.png" alt="Taily Logo" width={100} height={40} />
+      <header className="sticky top-0 z-40 max-w-6xl w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+          <div className="flex gap-6 md:gap-10">
+            <Link className="flex items-center space-x-2" href="#">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taily_logo_s-nencGYtpGHATGPVXC24IzAwWyZ1n8X.svg"
+                alt="taily logo"
+                width={89}
+                height={25}
+                className="ml-6"
+              />
+              <span className="sr-only">taily</span>
             </Link>
-            <div className="flex flex-1 items-center justify-end space-x-4">
-              <nav className="flex items-center space-x-4 hidden md:flex">
-                {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
-                  <Link
-                    key={index}
-                    className="text-sm font-medium text-black px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200"
-                    href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
-                  >
-                    {item}
-                  </Link>
-                ))}
-              </nav>
-              <Button
-                variant="ghost"
-                className="md:hidden"
-                size="icon"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </div>
+          </div>
+          <div className="flex flex-1 items-center justify-end space-x-4 max-w-6xl">
+            <nav className="flex items-center space-x-4 hidden md:flex">
+              {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
+                <Link
+                  key={index}
+                  className="text-sm font-medium text-black px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200"
+                  href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
+                >
+                  {item}
+                </Link>
+              ))}
+            </nav>
+            <Button
+              variant="ghost"
+              className="md:hidden"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
           </div>
         </div>
       </header>
@@ -454,7 +461,7 @@ export function TailyLandingPageJp() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
-                { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かかります。これには、��ータの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
+                { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かかります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                 { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
                 { question: "データのセキュリティは大丈夫ですか？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                 { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
