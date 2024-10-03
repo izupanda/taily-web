@@ -244,7 +244,7 @@ export default function TailyLandingPageJp() {
               ))}
             </div>
             <motion.p variants={fadeInUp} className="text-center mt-8 text-muted-foreground" transition={{ duration: 0.6 }}>
-              煩わしいAPI連携は必要ありません。tailyが自動的にデータを収集し、分析します。
+            ※ 煩わしいAPI連携は必要ありません。tailyが自動的にデータを収集し、分析します。
             </motion.p>
           </div>
         </motion.section>
