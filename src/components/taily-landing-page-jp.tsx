@@ -35,6 +35,7 @@ export default function TailyLandingPageJP() {
                 alt="taily logo"
                 width={89}
                 height={25}
+                className="ml-4"
               />
               <span className="sr-only">taily</span>
             </Link>
@@ -507,7 +508,7 @@ export default function TailyLandingPageJP() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <Button className="w-full" size="lg">
-                  お問い合わせはこちら
+                  お問い合わ��はこちら
                 </Button>
               </div>
             </div>
@@ -531,3 +532,5 @@ export default function TailyLandingPageJP() {
     </div>
   )
 }
+
+export default TailyLandingPageJp;
