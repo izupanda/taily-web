@@ -185,7 +185,7 @@ export default function TailyLandingPageJp() {
                 { icon: Clock, title: "データ分析に時間がかかる", content: "膨大なデータをExcelで管理し、複数店舗からのデータ抽出や集計作業に多大な時間を費やしています。繰り返し作業による人的ミスも発生しやすく、効率的な分析が困難です。" },
                 { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡するこができず、真の収益性が見えていません。" },
                 { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続能な成長が阻害されています。" },
-                { icon: Briefcase, title: "在庫管理の非効率", content: "SKU別の在庫回転率��利益の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
+                { icon: Briefcase, title: "在庫管理の非率", content: "SKU別の在庫回転率利��の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
                 { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
                 { icon: TrendingUp, title: "経営判断のスピード不足", content: "リアルタイムのデータ分析が困難なため、市場の変化や顧客ニーズの変化に迅速に対応できず、ビジネスチャンスを逃しています。" }
               ].map((item, index) => (
@@ -224,7 +224,7 @@ export default function TailyLandingPageJp() {
                 { icon: DollarSign, title: "利益最適化提案", content: "データ分析に基づいて、利益を最大化するための具体的な改善策を提案。成長戦略の立案をサポートします。" },
                 { icon: PieChart, title: "在庫最適化", content: "SKU別の在庫回転率と利益を連動して分析し、最適な在庫水準を提案。過剰在庫と欠品リスクを最小化します。" },
                 { icon: LineChart, title: "価格最適化", content: "SKU別の価格弾力性を分析し、利益を最大化する最適な価格設定を提案。競争力を維持しながら収益を向上させます。" },
-                { icon: Zap, title: "リアルタイムアラート", content: "重要な指が設定したしきい値を超えた場合、即時にアラートを通知。迅速な対応で機会損失を防ぎます。" }
+                { icon: Zap, title: "リアルタイムアラート", content: "重要な指が設定ししきい値を超えた場合、即時にアラートを通知。迅速な対応で機会損失を防ぎます。" }
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full">
@@ -332,19 +332,19 @@ export default function TailyLandingPageJp() {
                   title: "SKU最適化で利益率15%アップ",
                   tagline: "食品EC / 売上高3億円",
                   content: "SKU数が1000を超え、どの商品が本当に利益に貢献しているのか把握できませんでした。tailyを導入後、SKU別の利益が明確になり、上位20%の商品に注力することで、全体の利益率が15%向上しました。",
-                  image: "/placeholder.svg?height=100&width=100"
+                  image: "/client1.svg"
                 },
                 {
                   title: "季節商品の在庫30%削減",
                   tagline: "アパレルEC / 売上高8億円",
                   content: "季節品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
-                  image: "/placeholder.svg?height=100&width=100"
+                  image: "/client2.svg"
                 },
                 {
                   title: "適正価格設定で売上20%増",
                   tagline: "生活雑貨EC / 売上高5億円",
                   content: "競合との価格競争で利益率が低下していましたが、tailyの価格最適化機能を活用し、SKU別の適正価格を設定。結果、利益率を維持しながら売上を20%増加させることができました。",
-                  image: "/placeholder.svg?height=100&width=100"
+                  image: "/client3.svg"
                 }
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
@@ -359,13 +359,13 @@ export default function TailyLandingPageJp() {
                           className="rounded-full"
                         />
                         <div>
-                          <CardTitle className="text-lg">{item.title}</CardTitle>
-                          <p className="text-sm text-muted-foreground">{item.tagline}</p>
+                          <CardTitle className="text-lg mb-1">{item.title}</CardTitle>
+                          <p className="text-sm text-muted-foreground mt-1">{item.tagline}</p>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground">{item.content}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.content}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -408,10 +408,10 @@ export default function TailyLandingPageJp() {
                     "在庫最適化",
                     "価格最適化",
                     "週次レポート",
-                    "3ユーザーまで",
+                    "3ユーザーま",
                     "連携店舗数：最大5店舗",
                     "追加ユーザー：3,980円/月/ユーザー",
-                    "チャットサポート���き"
+                    "チャットサポート付き"
                   ]
                 },
                 {
@@ -430,12 +430,12 @@ export default function TailyLandingPageJp() {
               ].map((plan, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full">
-                    <CardHeader className="p-6 md:p-8"> {/* パディングを増やす */}
-                      <CardTitle className="text-2xl">{plan.title}</CardTitle> {/* タイトルのサイズを大きくする */}
+                    <CardHeader className="p-6 md:p-8 pb-4"> {/* pb-4 を追加 */}
+                      <CardTitle className="text-2xl mb-2">{plan.title}</CardTitle> {/* mb-2 を追加 */}
+                      <p className="text-3xl font-bold">{plan.price}</p>
                     </CardHeader>
-                    <CardContent className="p-6 md:p-8"> {/* パディングを増やす */}
-                      <p className="text-3xl font-bold mb-6">{plan.price}</p> {/* 価格の下にマージンを追加 */}
-                      <ul className="mt-4 space-y-3"> {/* リストアイテム間の間隔を広げる */}
+                    <CardContent className="p-6 md:p-8 pt-4"> {/* pt-4 を追加 */}
+                      <ul className="mt-4 space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
                             <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" /> {/* mr-3 から mr-4 に変更し、flex-shrink-0 を追加 */}
@@ -461,7 +461,7 @@ export default function TailyLandingPageJp() {
         >
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
-            <div className="max-w-3xl mx-auto"> {/* この div を追加 */}
+            <div className="max-w-4xl mx-auto"> {/* max-w-3xl から max-w-4xl に変更 */}
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
