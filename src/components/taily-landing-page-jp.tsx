@@ -126,9 +126,9 @@ export default function TailyLandingPageJp() {
           variants={staggerChildren}
         >
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-6 text-center"> // space-y-4 から space-y-6 に変更
-              <motion.div className="space-y-4" variants={fadeInUp} transition={{ duration: 0.6 }}> // space-y-2 から space-y-4 に変更
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight"> // leading-tight を追加
+            <div className="flex flex-col items-center space-y-6 text-center"> 
+              <motion.div className="space-y-4" variants={fadeInUp} transition={{ duration: 0.6 }}> 
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight"> 
                   利益を最大化する
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-semibold"> // font-semibold を追加
