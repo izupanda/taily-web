@@ -119,7 +119,7 @@ export default function TailyLandingPageJp() {
       )}
       <main className="flex-1 w-full">
         <motion.section
-          className="w-full py-8 md:py-16 lg:py-24 xl:py-32 bg-white pb-0" // pb-0 を追加
+          className="w-full pt-8 md:pt-16 lg:pt-24 xl:pt-32 bg-white"
           initial="initial"
           animate="animate"
           variants={staggerChildren}
@@ -151,7 +151,6 @@ export default function TailyLandingPageJp() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               style={{ transition: '0.8s ease-out' }}
-              className="pb-0"
             >
               <div className="relative w-full max-w-4xl mx-auto">
                 <Image
@@ -186,7 +185,7 @@ export default function TailyLandingPageJp() {
                 { icon: Clock, title: "データ分析に時間がかかる", content: "膨大なデータをExcelで管理し、複数店舗からのデータ抽出や集計作業に多大な時間を費やしています。繰り返し作業による人的ミスも発生しやすく、効率的な分析が困難です。" },
                 { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡するこができず、真の収益性が見えていません。" },
                 { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続能な成長が阻害されています。" },
-                { icon: Briefcase, title: "在庫管理の非率", content: "SKU別の在庫回転率利��の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
+                { icon: Briefcase, title: "在庫管理の非率", content: "SKU別の在庫回転率利の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
                 { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
                 { icon: TrendingUp, title: "経営判断のスピード不足", content: "リアルタイムのデータ分析が困難なため、市場の変化や顧客ニーズの変化に迅速に対応できず、ビジネスチャンスを逃しています。" }
               ].map((item, index) => (
@@ -272,7 +271,7 @@ export default function TailyLandingPageJp() {
                 },
                 {
                   icon: Lightbulb,
-                  title: "意思決定の迅速化",
+                  title: "意決定の迅速化",
                   content: "リアルタイムデータと自動レポート生成により、市場変化への対応が迅速化。ビジネスチャンスを逃さず、競争力が向上します。平均して意思決定時間が50%短縮されていす。",
                   details: [
                     "リアルタイムデータ分析によるトレンド把握",
@@ -431,15 +430,15 @@ export default function TailyLandingPageJp() {
               ].map((plan, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full">
-                    <CardHeader className="p-6 md:p-8 pb-4"> {/* pb-4 を追加 */}
-                      <CardTitle className="text-2xl mb-2">{plan.title}</CardTitle> {/* mb-2 を追加 */}
-                      <p className="text-3xl font-bold">{plan.price}</p>
+                    <CardHeader className="p-6 md:p-8 pb-2"> {/* pb-4 から pb-2 に変更 */}
+                      <CardTitle className="text-2xl mb-1">{plan.title}</CardTitle> {/* mb-2 から mb-1 に変更 */}
+                      <p className="text-3xl font-bold mb-2">{plan.price}</p> {/* mb-2 を追加 */}
                     </CardHeader>
-                    <CardContent className="p-6 md:p-8 pt-4"> {/* pt-4 を追加 */}
-                      <ul className="mt-4 space-y-3">
+                    <CardContent className="p-6 md:p-8 pt-2"> {/* pt-4 から pt-2 に変更 */}
+                      <ul className="mt-2 space-y-3"> {/* mt-4 から mt-2 に変更 */}
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
-                            <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" /> {/* mr-3 から mr-4 に変更し、flex-shrink-0 を追加 */}
+                            <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -462,14 +461,14 @@ export default function TailyLandingPageJp() {
         >
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
-            <div className="max-w-4xl mx-auto"> {/* max-w-3xl から max-w-4xl に変更 */}
+            <div className="max-w-5xl mx-auto"> {/* max-w-3xl から max-w-4xl に変更 */}
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                   { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
                   { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                   { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
-                  { question: "契約期間の縛りはありますか？", answer: "基本的に月額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
+                  { question: "契約期間の縛りはありますか？", answer: "基本的に額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
                 ].map((item, index) => (
                   <AccordionItem key={index} value={`item-${index + 1}`}>
                     <AccordionTrigger className="accordion-trigger">
