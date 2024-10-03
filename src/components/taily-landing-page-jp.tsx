@@ -26,7 +26,7 @@ export function TailyLandingPageJp() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans">
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto max-w-6xl px-4">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
