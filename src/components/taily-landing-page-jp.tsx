@@ -133,10 +133,10 @@ export default function TailyLandingPageJp() {
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-semibold">
                   中小ECのための経営羅針盤
                 </p>
-                <p className="mx-auto max-w-[700px] text-gray-500 text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                <p className="mx-auto max-w-[700px] text-gray-500 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg leading-relaxed">
                   tailyは、年商数千万円から15億円のEC事業者様向けに開発された<br /> 
                   SKU別利益分析ツールです。データに基づいた意思決定で<br />
-                  あなたのビジネスの成長と利益最大化をサポートします。
+                  あなたの店舗の成長と利益最大化をサポートします。
                 </p>
                 <p className="text-sm text-blue-600 font-semibold bg-blue-50 px-4 py-2 rounded-full inline-block mt-4">
   2024年12月、EC業界に革命を起こす - 今すぐ先行予約でVIP特典をゲット！
@@ -464,7 +464,7 @@ export default function TailyLandingPageJp() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
-                { question: "taily��導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
+                { question: "taily導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                 { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
                 { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                 { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
