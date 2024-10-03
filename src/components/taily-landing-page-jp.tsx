@@ -167,7 +167,7 @@ export default function TailyLandingPageJp() {
 
         <motion.section
           id="challenges"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
+          className="w-full pt-0 md:pt-0 lg:pt-0 pb-12 md:pb-24 lg:pb-32 bg-gray-100" // パディングを上部で削除し、下部のみに適用
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
@@ -184,7 +184,7 @@ export default function TailyLandingPageJp() {
               {[
                 { icon: Clock, title: "データ分析に時間がかかる", content: "膨大なデータをExcelで管理し、複数店舗からのデータ抽出や集計作業に多大な時間を費やしています。繰り返し作業による人的ミスも発生しやすく、効率的な分析が困難です。" },
                 { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡するこができず、真の収益性が見えていません。" },
-                { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続可能な成長が阻害されています。" },
+                { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続��能な成長が阻害されています。" },
                 { icon: Briefcase, title: "在庫管理の非効率", content: "SKU別の在庫回転率と利益の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
                 { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけでなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
                 { icon: TrendingUp, title: "経営判断のスピード不足", content: "リアルタイムのデータ分析が困難なため、市場の変化や顧客ニーズの変化に迅速に対応できず、ビジネスチャンスを逃しています。" }
@@ -272,7 +272,7 @@ export default function TailyLandingPageJp() {
                 {
                   icon: Lightbulb,
                   title: "意思決定の迅速化",
-                  content: "リアルタイムデータと自動レポート生成により、市場変化への対応が迅速化。ビジネスチャンスを逃さず、競争力が向上します。平均して意思決定時間が50%短縮されてい��す。",
+                  content: "リアルタイムデータと自動レポート生成により、市場変化への対応が迅速化。ビジネスチャンスを逃さず、競争力が向上します。平均して意思決定時間が50%短縮されていす。",
                   details: [
                     "リアルタイムデータ分析によるトレンド把握",
                     "自動レポート生成による情報共有の効率化",
