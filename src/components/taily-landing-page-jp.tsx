@@ -26,8 +26,8 @@ export function TailyLandingPageJp() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto max-w-6xl px-4">
-      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4">
+      <header className="sticky top-0 z-40 max-w-6xl w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link className="flex items-center space-x-2" href="#">
@@ -41,29 +41,17 @@ export function TailyLandingPageJp() {
               <span className="sr-only">taily</span>
             </Link>
           </div>
-          <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-1 hidden md:flex">
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#features">
-                機能
-              </Link>
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#challenges">
-                解決する課題
-              </Link>
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#effects">
-                導入効果
-              </Link>
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#case-studies">
-                ご相談事例
-              </Link>
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#pricing">
-                料金
-              </Link>
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#faq">
-                よくあるご質問
-              </Link>
-              <Link className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#contact">
-                お問い合わせ
-              </Link>
+          <div className="flex flex-1 items-center justify-end space-x-4 max-w-6xl">
+            <nav className="flex items-center space-x-4 hidden md:flex">
+              {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
+                <Link
+                  key={index}
+                  className="text-sm font-medium text-black px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200"
+                  href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
+                >
+                  {item}
+                </Link>
+              ))}
             </nav>
             <Button
               variant="ghost"
@@ -88,7 +76,7 @@ export function TailyLandingPageJp() {
                   size="icon"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
                   <span className="sr-only">Close menu</span>
                 </Button>
               </div>
@@ -120,7 +108,7 @@ export function TailyLandingPageJp() {
         </div>
       )}
       <main className="flex-1">
-        <motion.section 
+        <motion.section
           className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white"
           initial="initial"
           animate="animate"
@@ -150,10 +138,10 @@ export function TailyLandingPageJp() {
               </motion.div>
             </div>
             <motion.div
-  initial={{ scale: 0.8, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  style={{ transition: '0.8s ease-out' }} // ここに変更
->
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              style={{ transition: '0.8s ease-out' }} // ここに変更
+            >
 
               <div className="relative w-full max-w-4xl">
                 <Image
@@ -168,8 +156,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="challenges" 
+        <motion.section
+          id="challenges"
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
           initial="initial"
           whileInView="animate"
@@ -178,7 +166,7 @@ export function TailyLandingPageJp() {
         >
           <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyが解決する課題</h2>
-            <motion.div 
+            <motion.div
               className="flex justify-center mb-12"
               variants={fadeInUp}
             >
@@ -217,8 +205,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="features" 
+        <motion.section
+          id="features"
           className="w-full py-12 md:py-24 lg:py-32 bg-white"
           initial="initial"
           whileInView="animate"
@@ -257,8 +245,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="effects" 
+        <motion.section
+          id="effects"
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
           initial="initial"
           whileInView="animate"
@@ -270,8 +258,8 @@ export function TailyLandingPageJp() {
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  icon: Rocket, 
-                  title: "利益率の向上", 
+                  icon: Rocket,
+                  title: "利益率の向上",
                   content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の利益率が向上します。平均して20%以上の利益率改善を実現しています。",
                   details: [
                     "高収益SKUの特定と在庫最適化",
@@ -279,9 +267,9 @@ export function TailyLandingPageJp() {
                     "価格戦略の最適化による利益率向上"
                   ]
                 },
-                { 
-                  icon: Lightbulb, 
-                  title: "意思決定の迅速化", 
+                {
+                  icon: Lightbulb,
+                  title: "意思決定の迅速化",
                   content: "リアルタイムデータと自動レポート生成により、市場変化への対応が迅速化。ビジネスチャンスを逃さず、競争力が向上します。平均して意思決定時間が50%短縮されています。",
                   details: [
                     "リアルタイムデータ分析によるトレンド把握",
@@ -289,9 +277,9 @@ export function TailyLandingPageJp() {
                     "データに基づく迅速な意思決定プロセス"
                   ]
                 },
-                { 
-                  icon: Users, 
-                  title: "業務効率の改善", 
+                {
+                  icon: Users,
+                  title: "業務効率の改善",
                   content: "データ収集・分析の自動化により、従業員の作業時間が大幅に削減。戦略的タスクに注力できるようになります。平均して分析業務の時間が70%削減されています。",
                   details: [
                     "データ収集・集計作業の自動化",
@@ -326,8 +314,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="case-studies" 
+        <motion.section
+          id="case-studies"
           className="w-full py-12 md:py-24 lg:py-32 bg-white"
           initial="initial"
           whileInView="animate"
@@ -384,8 +372,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="pricing" 
+        <motion.section
+          id="pricing"
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
           initial="initial"
           whileInView="animate"
@@ -396,7 +384,7 @@ export function TailyLandingPageJp() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">料金プラン</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
-                { 
+                {
                   title: "スタータープラン",
                   price: "¥20,000/月",
                   features: [
@@ -461,8 +449,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="faq" 
+        <motion.section
+          id="faq"
           className="w-full py-12 md:py-24 lg:py-32 bg-white"
           initial="initial"
           whileInView="animate"
@@ -488,8 +476,8 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
-          id="contact" 
+        <motion.section
+          id="contact"
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
           initial="initial"
           whileInView="animate"
@@ -497,7 +485,7 @@ export function TailyLandingPageJp() {
           variants={staggerChildren}
         >
           <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
-      
+
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">お問い合わせ</h2>
@@ -515,7 +503,7 @@ export function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex max-w-6xl flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
