@@ -57,7 +57,7 @@ export default function TailyLandingPageJp() {
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
                   key={index}
-                  className="text-sm font-medium text-black px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200"
+                  className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200 hover:text-gray-900"
                   href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
                 >
                   {item}
@@ -120,23 +120,23 @@ export default function TailyLandingPageJp() {
       )}
       <main className="flex-1 w-full">
         <motion.section
-          className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-white"
+          className="w-full py-8 md:py-16 lg:py-24 xl:py-32 bg-white" // パディングを少し減らしました
           initial="initial"
           animate="animate"
           variants={staggerChildren}
         >
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <motion.div className="space-y-2" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+            <div className="flex flex-col items-center space-y-6 text-center"> // space-y-4 から space-y-6 に変更
+              <motion.div className="space-y-4" variants={fadeInUp} transition={{ duration: 0.6 }}> // space-y-2 から space-y-4 に変更
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight"> // leading-tight を追加
                   利益を最大化する
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400">
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-semibold"> // font-semibold を追加
                   中小ECのための経営羅針盤
                 </p>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  tailyは、年商数千万円から15億円のEC事業者様向けに開発された、
-                  SKU別利益分析ツールです。データに基づいた意思決定で、
+                <p className="mx-auto max-w-[700px] text-gray-500 text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed">
+                  tailyは、年商数千万円から15億円のEC事業者様向けに開発された<br /> 
+                  SKU別利益分析ツールです。データに基づいた意思決定で<br />
                   あなたのビジネスの成長と利益最大化をサポートします。
                 </p>
                 <p className="text-sm text-blue-600 font-semibold bg-blue-50 px-4 py-2 rounded-full inline-block mt-4 taily-vip-banner">
@@ -465,7 +465,7 @@ export default function TailyLandingPageJp() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
-                { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かかります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
+                { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度か��ります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                 { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
                 { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                 { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
