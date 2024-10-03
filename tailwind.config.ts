@@ -6,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    // 必要に応じて他のパスを追加
+    "./src/components/taily-landing-page-jp.tsx",
   ],
   theme: {
   	extend: {
@@ -75,8 +75,7 @@ const config: Config = {
   	borderRadius: {
   		lg: 'var(--radius)',
   		md: 'calc(var(--radius) - 2px)',
-  		sm: 'calc(var(--radius) - 4px)',
-  		'full': '9999px',
+  		sm: 'calc(var(--radius) - 4px)'
   	},
   	keyframes: {
   		'accordion-down': {
