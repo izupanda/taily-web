@@ -31,9 +31,9 @@ export default function TailyLandingPageJp() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4 ${notoSansJP.className}">
-      <header className="sticky top-0 z-40 max-w-6xl w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="max-w-6xl mx-auto">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex gap-6 md:gap-10">
             <Link className="flex items-center space-x-2" href="#">
               <Image
                 src="../public/taily_logo_s.svg"
@@ -45,7 +45,7 @@ export default function TailyLandingPageJp() {
               <span className="sr-only">taily</span>
             </Link>
           </div>
-          <div className="flex flex-1 items-center justify-end space-x-4 max-w-6xl">
+          <div className="flex flex-1 items-center justify-end space-x-4">
             <nav className="flex items-center space-x-4 hidden md:flex">
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
@@ -68,6 +68,7 @@ export default function TailyLandingPageJp() {
             </Button>
           </div>
         </div>
+
       </header>
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm md:hidden">
@@ -147,7 +148,7 @@ export default function TailyLandingPageJp() {
               style={{ transition: '0.8s ease-out' }} // ここに変更
             >
 
-              <div className="relative w-full max-w-4xl">
+              <div className="relative w-full max-w-4xl mx-auto">
                 <Image
                   src="/placeholder.svg?height=400&width=800"
                   width={800}
@@ -174,13 +175,6 @@ export default function TailyLandingPageJp() {
               className="flex justify-center mb-12"
               variants={fadeInUp}
             >
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0_0-Vky85Rk13xeq4IAjD8DYwUhLdL7wY8.jpg"
-                alt="E-commerce challenges illustration"
-                width={400}
-                height={400}
-                className="rounded-lg shadow-xl"
-              />
             </motion.div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
