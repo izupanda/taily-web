@@ -424,20 +424,20 @@ export default function TailyLandingPageJp() {
                     "カスタマイズ可能なダッシュボード",
                     "10ユーザーまで",
                     "連携店舗数：無制限",
-                    "追加ユーザー：3,980円/月/ユーザー",
+                    "追加ユーザー：3,980円/月/���ーザー",
                     "専任サポート",
                     "チャットサポート付き"
                   ]
                 }
               ].map((plan, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
-                  <Card className="w-full">
-                    <CardHeader className="p-6 md:p-8 pb-2"> {/* pb-4 から pb-2 に変更 */}
-                      <CardTitle className="text-2xl mb-1">{plan.title}</CardTitle> {/* mb-2 から mb-1 に変更 */}
-                      <p className="text-3xl font-bold mb-2">{plan.price}</p> {/* mb-2 を追加 */}
+                  <Card className="w-full flex flex-col">
+                    <CardHeader className="p-6 md:p-8 pb-2">
+                      <CardTitle className="text-2xl mb-1">{plan.title}</CardTitle>
+                      <p className="text-3xl font-bold">{plan.price}</p>
                     </CardHeader>
-                    <CardContent className="p-6 md:p-8 pt-2"> {/* pt-4 から pt-2 に変更 */}
-                      <ul className="mt-2 space-y-3"> {/* mt-4 から mt-2 に変更 */}
+                    <CardContent className="p-6 md:p-8 pt-4 pb-0 flex-grow">
+                      <ul className="mt-2 space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
                             <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" />
