@@ -119,7 +119,7 @@ export default function TailyLandingPageJp() {
       )}
       <main className="flex-1 w-full">
         <motion.section
-          className="w-full py-8 md:py-16 lg:py-24 xl:py-32 bg-white" // パディングを少し減らしました
+          className="w-full py-8 md:py-16 lg:py-24 xl:py-32 bg-white pb-0" // pb-0 を追加
           initial="initial"
           animate="animate"
           variants={staggerChildren}
@@ -150,16 +150,15 @@ export default function TailyLandingPageJp() {
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              style={{ transition: '0.8s ease-out' }} // ここに変更
+              style={{ transition: '0.8s ease-out' }}
             >
-
               <div className="relative w-full max-w-4xl mx-auto">
                 <Image
                   src="/ui-img.svg"
                   width={734}
                   height={397}
                   alt="taily dashboard"
-                  className="rounded-lg shadow-xl"
+                  className="w-full h-auto" // クラスを変更
                 />
               </div>
             </motion.div>
@@ -273,7 +272,7 @@ export default function TailyLandingPageJp() {
                 {
                   icon: Lightbulb,
                   title: "意思決定の迅速化",
-                  content: "リアルタイムデータと自動レポート生成により、市場変化への対応が迅速化。ビジネスチャンスを逃さず、競争力が向上します。平均して意思決定時間が50%短縮されています。",
+                  content: "リアルタイムデータと自動レポート生成により、市場変化への対応が迅速化。ビジネスチャンスを逃さず、競争力が向上します。平均して意思決定時間が50%短縮されてい��す。",
                   details: [
                     "リアルタイムデータ分析によるトレンド把握",
                     "自動レポート生成による情報共有の効率化",
@@ -330,20 +329,20 @@ export default function TailyLandingPageJp() {
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  title: "食品EC / 売上高3億円",
-                  tagline: "SKU最適化で利益率15%アップ",
+                  title: "SKU最適化で利益率15%アップ",
+                  tagline: "食品EC / 売上高3億円",
                   content: "SKU数が1000を超え、どの商品が本当に利益に貢献しているのか把握できませんでした。tailyを導入後、SKU別の利益が明確になり、上位20%の商品に注力することで、全体の利益率が15%向上しました。",
                   image: "/placeholder.svg?height=100&width=100"
                 },
                 {
-                  title: "アパレルEC / 売上高8億円",
-                  tagline: "季節商品の在庫30%削減",
+                  title: "季節商品の在庫30%削減",
+                  tagline: "アパレルEC / 売上高8億円",
                   content: "季商品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
                   image: "/placeholder.svg?height=100&width=100"
                 },
                 {
-                  title: "生活雑貨EC / 売上高5億円",
-                  tagline: "適正価格設定で売上20%増",
+                  title: "適正価格設定で売上20%増",
+                  tagline: "生活雑貨EC / 売上高5億円",
                   content: "競合との価格競争で利益率が低下していましたが、tailyの価格最適化機能を活用し、SKU別の適正価格を設定。結果、利益率を維持しながら売上を20%増加させることができました。",
                   image: "/placeholder.svg?height=100&width=100"
                 }
