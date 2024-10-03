@@ -1,5 +1,3 @@
-'use client'
-
 import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,12 +7,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-export function TailyLandingPageJp() {
+export default function TailyLandingPageJP() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 }
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
   }
 
   const staggerChildren = {
@@ -125,9 +124,9 @@ export function TailyLandingPageJp() {
           animate="animate"
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }} >
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <div className="flex flex-col items-center space-y-4 text-center">
-              <motion.div className="space-y-2" variants={fadeInUp} transition={{ duration: 0.6 }}>
+              <motion.div className="space-y-2" variants={fadeInUp}>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   利益を最大化する
                 </h1>
@@ -143,17 +142,19 @@ export function TailyLandingPageJp() {
                   2024年12月、EC業界に革命を起こす - 今すぐ先行予約でVIP特典をゲット！
                 </p>
               </motion.div>
-              <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
+              <motion.div className="space-x-4" variants={fadeInUp}>
                 <Button>詳細を見る</Button>
                 <Button variant="outline">お問い合わせ</Button>
               </motion.div>
             </div>
-            <motion.div
-  initial={{ scale: 0.8, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  style={{ transition: '0.8s ease-out' }} // ここに変更
->
-
+            <motion.div 
+              className="mt-12 flex justify-center relative"
+              variants={{
+                initial: { scale: 0.8, opacity: 0 },
+                animate: { scale: 1, opacity: 1 },
+                transition: { duration: 0.8, ease: "easeOut" }
+              }}
+            >
               <div className="relative w-full max-w-4xl">
                 <Image
                   src="/placeholder.svg?height=400&width=800"
@@ -175,7 +176,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyが解決する課題</h2>
             <motion.div 
               className="flex justify-center mb-12"
@@ -198,7 +199,7 @@ export function TailyLandingPageJp() {
                 { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけでなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
                 { icon: TrendingUp, title: "経営判断のスピード不足", content: "リアルタイムのデータ分析が困難なため、市場の変化や顧客ニーズの変化に迅速に対応できず、ビジネスチャンスを逃しています。" }
               ].map((item, index) => (
-                <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
+                <motion.div key={index} variants={fadeInUp} className="flex">
                   <Card className="w-full">
                     <CardHeader>
                       <CardTitle className="flex items-center text-lg">
@@ -224,7 +225,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyの主な機能</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -235,7 +236,7 @@ export function TailyLandingPageJp() {
                 { icon: LineChart, title: "価格最適化", content: "SKU別の価格弾力性を分析し、利益を最大化する最適な価格設定を提案。競争力を維持しながら収益を向上させます。" },
                 { icon: Zap, title: "リアルタイムアラート", content: "重要な指標が設定したしきい値を超えた場合、即時にアラートを通知。迅速な対応で機会損失を防ぎます。" }
               ].map((item, index) => (
-                <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
+                <motion.div key={index} variants={fadeInUp} className="flex">
                   <Card className="w-full">
                     <CardHeader>
                       <CardTitle className="flex items-center text-lg">
@@ -250,7 +251,7 @@ export function TailyLandingPageJp() {
                 </motion.div>
               ))}
             </div>
-            <motion.p variants={fadeInUp} className="text-center mt-8 text-muted-foreground" transition={{ duration: 0.6 }}>
+            <motion.p variants={fadeInUp} className="text-center mt-8 text-muted-foreground">
               煩わしいAPI連携は必要ありません。tailyが自動的にデータを収集し、分析します。
             </motion.p>
           </motion.div>
@@ -264,7 +265,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyを導入することによる効果</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -299,7 +300,7 @@ export function TailyLandingPageJp() {
                   ]
                 }
               ].map((item, index) => (
-                <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
+                <motion.div key={index} variants={fadeInUp} className="flex">
                   <Card className="w-full">
                     <CardHeader>
                       <CardTitle className="flex items-center text-lg">
@@ -333,7 +334,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">ご相談事例</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -356,7 +357,7 @@ export function TailyLandingPageJp() {
                   image: "/placeholder.svg?height=100&width=100"
                 }
               ].map((item, index) => (
-                <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
+                <motion.div key={index} variants={fadeInUp} className="flex">
                   <Card className="w-full">
                     <CardHeader>
                       <div className="flex items-center space-x-4">
@@ -391,7 +392,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">料金プラン</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -437,7 +438,7 @@ export function TailyLandingPageJp() {
                   ]
                 }
               ].map((plan, index) => (
-                <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
+                <motion.div key={index} variants={fadeInUp} className="flex">
                   <Card className="w-full">
                     <CardHeader>
                       <CardTitle>{plan.title}</CardTitle>
@@ -468,7 +469,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
@@ -495,8 +496,7 @@ export function TailyLandingPageJp() {
           viewport={{ once: true }}
           variants={staggerChildren}
         >
-          <motion.div className="container px-4 md:px-6" variants={fadeInUp} transition={{ duration: 0.6 }}>
-      
+          <motion.div className="container px-4 md:px-6" variants={fadeInUp}>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">お問い合わせ</h2>
