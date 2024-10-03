@@ -33,21 +33,18 @@ export default function TailyLandingPageJp() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4 ${notoSansJP.className}">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="max-w-6xl mx-auto">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <div className="container mx-auto px-4">
+          <div className="flex h-16 items-center justify-between">
             <Link className="flex items-center space-x-2" href="#">
-            <Image
+              <Image
                 src={tailyLogo}
                 alt="taily logo"
                 width={89}
                 height={25}
-                className="ml-6"
               />
               <span className="sr-only">taily</span>
             </Link>
-          </div>
-          <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-4 hidden md:flex">
+            <nav className="hidden md:flex items-center space-x-4">
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
                   key={index}
@@ -69,7 +66,6 @@ export default function TailyLandingPageJp() {
             </Button>
           </div>
         </div>
-
       </header>
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm md:hidden">
@@ -462,7 +458,7 @@ export default function TailyLandingPageJp() {
               {[
                 { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かかります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                 { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
-                { question: "データのセキュリティは大丈夫ですか？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
+                { question: "データのセキュリティは大丈夫です���？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                 { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
                 { question: "契約期間の縛りはありますか？", answer: "基本的に月額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
               ].map((item, index) => (
@@ -502,7 +498,8 @@ export default function TailyLandingPageJp() {
           </motion.div>
         </motion.section>
       </main>
-      <footer className="flex max-w-6xl flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t w-full">
+        <div className="max-w-6xl mx-auto">
         <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="https://pandalab.jp/" target="_blank" rel="noopener noreferrer">
@@ -515,6 +512,7 @@ export default function TailyLandingPageJp() {
             プライバシーポリシー
           </Link>
         </nav>
+        </div>
       </footer>
     </div>
   )
