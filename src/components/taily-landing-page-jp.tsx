@@ -9,6 +9,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { BarChart3, TrendingUp, DollarSign, CheckCircle, PieChart, LineChart, Zap, Clock, Database, Target, Briefcase, Rocket, Lightbulb, Users, Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Noto_Sans_JP } from 'next/font/google'
+
 import { motion } from "framer-motion"
 
 export default function TailyLandingPageJp() {
@@ -28,13 +30,13 @@ export default function TailyLandingPageJp() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4">
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 font-sans container mx-auto px-4 ${notoSansJP.className}">
       <header className="sticky top-0 z-40 max-w-6xl w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link className="flex items-center space-x-2" href="#">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/taily_logo_s-nencGYtpGHATGPVXC24IzAwWyZ1n8X.svg"
+                src="../public/taily_logo_s.svg"
                 alt="taily logo"
                 width={89}
                 height={25}
