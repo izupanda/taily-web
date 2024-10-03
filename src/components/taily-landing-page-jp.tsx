@@ -56,7 +56,7 @@ export default function TailyLandingPageJp() {
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
                   key={index}
-                  className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:text-gray-400"
+                  className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:text-gray-600"
                   href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
                 >
                   {item}
@@ -184,9 +184,9 @@ export default function TailyLandingPageJp() {
               {[
                 { icon: Clock, title: "データ分析に時間がかかる", content: "膨大なデータをExcelで管理し、複数店舗からのデータ抽出や集計作業に多大な時間を費やしています。繰り返し作業による人的ミスも発生しやすく、効率的な分析が困難です。" },
                 { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡するこができず、真の収益性が見えていません。" },
-                { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続��能な成長が阻害されています。" },
-                { icon: Briefcase, title: "在庫管理の非効率", content: "SKU別の在庫回転率と利益の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
-                { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけでなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
+                { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続能な成長が阻害されています。" },
+                { icon: Briefcase, title: "在庫管理の非効率", content: "SKU別の在庫回転率��利益の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
+                { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーションの効果を、売上だけなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
                 { icon: TrendingUp, title: "経営判断のスピード不足", content: "リアルタイムのデータ分析が困難なため、市場の変化や顧客ニーズの変化に迅速に対応できず、ビジネスチャンスを逃しています。" }
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
@@ -216,7 +216,7 @@ export default function TailyLandingPageJp() {
           variants={staggerChildren}
         >
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyの主な機能</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyのな機</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
                 { icon: BarChart3, title: "SKU別利益分析", content: "各SKUの最終利益を詳細に分析し、収益性の高い商品を特定。利益最大化の基盤を構築します。" },
@@ -224,7 +224,7 @@ export default function TailyLandingPageJp() {
                 { icon: DollarSign, title: "利益最適化提案", content: "データ分析に基づいて、利益を最大化するための具体的な改善策を提案。成長戦略の立案をサポートします。" },
                 { icon: PieChart, title: "在庫最適化", content: "SKU別の在庫回転率と利益を連動して分析し、最適な在庫水準を提案。過剰在庫と欠品リスクを最小化します。" },
                 { icon: LineChart, title: "価格最適化", content: "SKU別の価格弾力性を分析し、利益を最大化する最適な価格設定を提案。競争力を維持しながら収益を向上させます。" },
-                { icon: Zap, title: "リアルタイムアラート", content: "重要な指標が設定したしきい値を超えた場合、即時にアラートを通知。迅速な対応で機会損失を防ぎます。" }
+                { icon: Zap, title: "リアルタイムアラート", content: "重要な指が設定したしきい値を超えた場合、即時にアラートを通知。迅速な対応で機会損失を防ぎます。" }
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full">
@@ -337,7 +337,7 @@ export default function TailyLandingPageJp() {
                 {
                   title: "季節商品の在庫30%削減",
                   tagline: "アパレルEC / 売上高8億円",
-                  content: "季商品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
+                  content: "季節品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
                   image: "/placeholder.svg?height=100&width=100"
                 },
                 {
@@ -411,7 +411,7 @@ export default function TailyLandingPageJp() {
                     "3ユーザーまで",
                     "連携店舗数：最大5店舗",
                     "追加ユーザー：3,980円/月/ユーザー",
-                    "チャットサポート付き"
+                    "チャットサポート���き"
                   ]
                 },
                 {
@@ -430,15 +430,15 @@ export default function TailyLandingPageJp() {
               ].map((plan, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full">
-                    <CardHeader>
-                      <CardTitle>{plan.title}</CardTitle>
+                    <CardHeader className="p-6 md:p-8"> {/* パディングを増やす */}
+                      <CardTitle className="text-2xl">{plan.title}</CardTitle> {/* タイトルのサイズを大きくする */}
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-3xl font-bold">{plan.price}</p>
-                      <ul className="mt-4 space-y-2">
+                    <CardContent className="p-6 md:p-8"> {/* パディングを増やす */}
+                      <p className="text-3xl font-bold mb-6">{plan.price}</p> {/* 価格の下にマージンを追加 */}
+                      <ul className="mt-4 space-y-3"> {/* リストアイテム間の間隔を広げる */}
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
-                            <CheckCircle className="w-4 h-4 mr-2 text-primary" />
+                            <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" /> {/* mr-3 から mr-4 に変更し、flex-shrink-0 を追加 */}
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -461,20 +461,24 @@ export default function TailyLandingPageJp() {
         >
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
-            <Accordion type="single" collapsible className="w-full">
-              {[
-                { question: "taily導入にはどのくらいの時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
-                { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
-                { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
-                { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
-                { question: "契約期間の縛りはありますか？", answer: "基本的に月額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
-              ].map((item, index) => (
-                <AccordionItem key={index} value={`item-${index + 1}`}>
-                  <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent>{item.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <div className="max-w-3xl mx-auto"> {/* この div を追加 */}
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
+                  { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行います。連携可能な店舗数は、ご契約のプランによって異なります。" },
+                  { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
+                  { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
+                  { question: "契約期間の縛りはありますか？", answer: "基本的に月額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
+                ].map((item, index) => (
+                  <AccordionItem key={index} value={`item-${index + 1}`}>
+                    <AccordionTrigger className="accordion-trigger">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent>{item.answer}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </motion.section>
 
