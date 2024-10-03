@@ -35,7 +35,7 @@ export default function TailyLandingPageJp() {
       }
     }
 
-    
+
   }
 
   return (
@@ -52,7 +52,7 @@ export default function TailyLandingPageJp() {
               />
               <span className="sr-only">taily</span>
             </Link>
-               <nav className="hidden md:flex items-center space-x-4">
+            <nav className="hidden md:flex items-center space-x-4">
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
                   key={index}
@@ -125,22 +125,22 @@ export default function TailyLandingPageJp() {
           variants={staggerChildren}
         >
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-6 text-center"> 
-              <motion.div className="space-y-4" variants={fadeInUp} transition={{ duration: 0.6 }}> 
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight"> 
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <motion.div className="space-y-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight">
                   利益を最大化する
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-semibold">
                   中小ECのための経営羅針盤
                 </p>
                 <p className="mx-auto max-w-[700px] text-gray-500 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg leading-relaxed">
-                  tailyは、年商数千万円から15億円のEC事業者様向けに開発された<br /> 
+                  tailyは、年商数千万円から15億円のEC事業者様向けに開発された<br />
                   SKU別利益分析ツールです。データに基づいた意思決定で<br />
                   あなたの店舗の成長と利益最大化をサポートします。
                 </p>
                 <p className="text-sm text-blue-600 font-semibold bg-blue-50 px-4 py-2 rounded-full inline-block mt-4">
-  2024年12月、EC業界に革命を起こす - 今すぐ先行予約でVIP特典をゲット！
-</p>
+                  2024年12月、EC業界に革命を起こす - 今すぐ先行予約でVIP特典をゲット！
+                </p>
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 <Button>詳細を見る</Button>
@@ -151,6 +151,7 @@ export default function TailyLandingPageJp() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               style={{ transition: '0.8s ease-out' }}
+              className="pb-0"
             >
               <div className="relative w-full max-w-4xl mx-auto">
                 <Image
@@ -167,7 +168,7 @@ export default function TailyLandingPageJp() {
 
         <motion.section
           id="challenges"
-          className="w-full pt-0 md:pt-0 lg:pt-0 pb-12 md:pb-24 lg:pb-32 bg-gray-100" // パディングを上部で削除し、下部のみに適用
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
@@ -216,7 +217,7 @@ export default function TailyLandingPageJp() {
           variants={staggerChildren}
         >
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyのな機</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">tailyの主な機能</h2>
             <div className="grid gap-6 items-stretch md:grid-cols-2 lg:grid-cols-3">
               {[
                 { icon: BarChart3, title: "SKU別利益分析", content: "各SKUの最終利益を詳細に分析し、収益性の高い商品を特定。利益最大化の基盤を構築します。" },
@@ -242,7 +243,7 @@ export default function TailyLandingPageJp() {
               ))}
             </div>
             <motion.p variants={fadeInUp} className="text-center mt-8 text-muted-foreground" transition={{ duration: 0.6 }}>
-            ※ 煩わしいAPI連携は必要ありません。tailyが自動的にデータを収集し、分析します。
+              ※ 煩わしいAPI連携は必要ありません。tailyが自動的にデータを収集し、分析します。
             </motion.p>
           </div>
         </motion.section>
