@@ -134,7 +134,7 @@ export default function TailyLandingPageJp() {
                   中小ECのための経営羅針盤
                 </p>
                 <p className="mx-auto max-w-[700px] text-gray-500 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg leading-relaxed">
-                  tailyは、年商数千万円から15億円のEC事業者様向けに開発された<br />
+                  tailyは、年商数千万円から15億円程度のEC事業者様向けに開発された<br />
                   SKU別利益分析ツールです。データに基づいた意思決定で<br />
                   あなたの店舗の成長と利益最大化をサポートします。
                 </p>
@@ -143,7 +143,9 @@ export default function TailyLandingPageJp() {
                 </p>
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <Button>詳細を見る</Button>
+                <Button className="w-full px-4 text-lg font-medium" size="lg">
+                  <Link href="/contact" className="py-2">お問い合わせはこちら</Link>
+                </Button>
                 <Button variant="outline">
                   <Link href="/contact">お問い合わせはこちら</Link>
                 </Button>
@@ -264,7 +266,7 @@ export default function TailyLandingPageJp() {
                 {
                   icon: Rocket,
                   title: "利益率の向上",
-                  content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の利益率が向上します。平均して20%以上の利益率改善を実現しています。",
+                  content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の利益率が向上します。平均して20%��上の利益率改善を実現しています。",
                   details: [
                     "高収益SKUの特定と在庫最適化",
                     "低収益SKUの改善または廃止",
@@ -503,8 +505,8 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full" size="lg">
-                  <Link href="/contact">お問い合わせはこちら</Link>
+                <Button className="w-full px-4 text-lg font-medium" size="lg">
+                  <Link href="/contact" className="py-2">お問い合わせはこちら</Link>
                 </Button>
               </div>
             </div>
