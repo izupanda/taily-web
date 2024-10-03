@@ -70,6 +70,8 @@
 
 @layer components {
   .taily-vip-banner {
-    @apply text-sm text-blue-600 font-semibold bg-blue-50 px-4 py-2 rounded-full inline-block mt-4;
+    @apply text-sm font-semibold px-4 py-2 rounded-full inline-block mt-4;
+    color: theme('colors.blue.600');
+    background-color: theme('colors.blue.50');
   }
 }
