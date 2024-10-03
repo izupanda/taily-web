@@ -4,6 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 
 
+import tailyLogo from "../../public/taily_logo_s.svg" 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BarChart3, TrendingUp, DollarSign, CheckCircle, PieChart, LineChart, Zap, Clock, Database, Target, Briefcase, Rocket, Lightbulb, Users, Menu } from "lucide-react"
@@ -35,8 +36,8 @@ export default function TailyLandingPageJp() {
       <div className="max-w-6xl mx-auto">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
             <Link className="flex items-center space-x-2" href="#">
-              <Image
-                src="../public/taily_logo_s.svg"
+            <Image
+                src={tailyLogo}
                 alt="taily logo"
                 width={89}
                 height={25}
