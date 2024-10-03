@@ -56,11 +56,10 @@ export default function TailyLandingPageJp() {
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
                   key={index}
-                  className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200 hover:text-gray-900 relative group"
+                  className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-200 hover:text-gray-900"
                   href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
                 >
                   {item}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                 </Link>
               ))}
             </nav>
@@ -128,7 +127,7 @@ export default function TailyLandingPageJp() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-6 text-center"> 
               <motion.div className="space-y-4" variants={fadeInUp} transition={{ duration: 0.6 }}> 
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight"> // leading-tight を追加
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none leading-tight"> 
                   利益を最大化する
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-semibold">
