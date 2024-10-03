@@ -3,10 +3,8 @@ import type { Config } from "tailwindcss";
 const config: Config = {
     darkMode: ["class"],
     content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/taily-landing-page-jp.tsx",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    // 必要に応じて他のパスを追加
   ],
   theme: {
   	extend: {
