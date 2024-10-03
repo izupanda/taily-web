@@ -57,7 +57,7 @@ export default function TailyLandingPageJp() {
                 <Link
                   key={index}
                   className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:text-gray-600"
-                  href={`#${['features', 'challenges', 'effects', 'case-studies', 'pricing', 'faq', 'contact'][index]}`}
+                  href={`${['#features', '#challenges', '#effects', '#case-studies', '#pricing', '#faq', '/contact'][index]}`}
                 >
                   {item}
                 </Link>
@@ -109,7 +109,7 @@ export default function TailyLandingPageJp() {
                 <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#faq" onClick={() => setIsMenuOpen(false)}>
                   よくあるご質問
                 </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#contact" onClick={() => setIsMenuOpen(false)}>
+                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="/contact" onClick={() => setIsMenuOpen(false)}>
                   お問い合わせ
                 </Link>
               </nav>
@@ -144,7 +144,9 @@ export default function TailyLandingPageJp() {
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 <Button>詳細を見る</Button>
-                <Button variant="outline">お問い合わせ</Button>
+                <Button variant="outline">
+                  <Link href="/contact">お問い合わせはこちら</Link>
+                </Button>
               </motion.div>
             </div>
             <motion.div
@@ -465,7 +467,7 @@ export default function TailyLandingPageJp() {
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
-                  { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行��ます。連携可能な店舗数は、ご契約のプランによって異なります。" },
+                  { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行ます。連携可能な店舗数は、ご契約のプランによって異なります。" },
                   { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                   { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
                   { question: "契約期間の縛りはありますか？", answer: "基本的に額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
@@ -502,7 +504,7 @@ export default function TailyLandingPageJp() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <Button className="w-full" size="lg">
-                  お問い合わせはこちら
+                  <Link href="/contact">お問い合わせはこちら</Link>
                 </Button>
               </div>
             </div>
