@@ -52,7 +52,7 @@ export default function TailyLandingPageJp() {
               />
               <span className="sr-only">taily</span>
             </Link>
-            <nav className="hidden md:flex items-center space-x-4">
+               <nav className="hidden md:flex items-center space-x-4">
               {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
                 <Link
                   key={index}
