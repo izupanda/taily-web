@@ -424,7 +424,7 @@ export default function TailyLandingPageJp() {
                     "カスタマイズ可能なダッシュボード",
                     "10ユーザーまで",
                     "連携店舗数：無制限",
-                    "追加ユーザー：3,980円/月/���ーザー",
+                    "追加ユーザー：3,980円/月/ーザー",
                     "専任サポート",
                     "チャットサポート付き"
                   ]
@@ -462,7 +462,7 @@ export default function TailyLandingPageJp() {
           variants={staggerChildren}
         >
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくあるご質問</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくある��質問</h2>
             <div className="max-w-5xl mx-auto"> {/* max-w-3xl から max-w-4xl に変更 */}
               <Accordion type="single" collapsible className="w-full">
                 {[
@@ -496,7 +496,7 @@ export default function TailyLandingPageJp() {
 
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">お問い合わせ</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">お問い合わせ</h2>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   tailyについてのご質問や導入のご相談は、お気軽にお問い合わせください。<br />
                   専門のメンバーが丁寧にご相談に乗らせていただきます。
