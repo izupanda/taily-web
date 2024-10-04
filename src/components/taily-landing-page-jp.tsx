@@ -166,7 +166,7 @@ export default function TailyLandingPageJp() {
                         scrollToSection('features');
                       }}
                     >
-                      詳細を見る
+                      先行予約をする
                     </Link>
                   </Button>
                   <Button variant="outline" asChild>
