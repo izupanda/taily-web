@@ -5,13 +5,15 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     company: '',
+    email: '',
+    phone: '',
     message: ''
   })
 
@@ -20,65 +22,101 @@ export default function Contact() {
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // ここにフォーム送信のロジックを追加
-    console.log('Form submitted:', formData)
-    // フォーム送信後の処理（例：送信完了メッセージの表示、フォームのリセットなど）
+    try {
+      const response = await fetch('/api/contact', {  // URLは変更なし
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        alert('お問い合わせを受け付けました')
+        setFormData({ name: '', company: '', email: '', phone: '', message: '' })
+      } else {
+        throw new Error('送信に失敗しました')
+      }
+    } catch (error) {
+      console.error('エラー:', error)
+      alert('エラーが発生しました。もう一度お試しください。')
+    }
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">お名前</label>
-          <Input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
+        <div className="container max-w-3xl mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">お名前 <span className="text-red-500">*</span></label>
+              <Input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="パンダ太郎"
+              />
+            </div>
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700">会社名</label>
+              <Input
+                type="text"
+                id="company"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                placeholder="株式会社パンダ"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">メールアドレス <span className="text-red-500">*</span></label>
+              <Input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="support@pandalab.jp"
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">電話番号</label>
+              <Input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="070-0000-0000"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">お問い合わせ内容 <span className="text-red-500">*</span></label>
+              <Textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder="お問い合わせ内容をご記入ください"
+              />
+            </div>
+            <Button type="submit">送信</Button>
+          </form>
+          <Link href="/" className="mt-8 inline-block text-blue-600 hover:text-blue-800">
+            トップページに戻る
+          </Link>
         </div>
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">メールアドレス</label>
-          <Input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700">会社名</label>
-          <Input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">お問い合わせ内容</label>
-          <Textarea
-            id="message"
-            name="message"
-            rows={4}
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <Button type="submit">送信</Button>
-      </form>
-      <Link href="/" className="mt-8 inline-block text-blue-600 hover:text-blue-800">
-        トップページに戻る
-      </Link>
+      </main>
+      <Footer />
     </div>
   )
 }
