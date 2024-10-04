@@ -527,7 +527,7 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full mt-20 px-4 text-lg font-medium flex items-center justify-center" size="lg">
+                <Button className="w-full mt-2 px-4 text-lg font-medium flex items-center justify-center" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
