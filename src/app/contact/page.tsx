@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ArrowLeft } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -48,11 +49,11 @@ export default function Contact() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <div className="container max-w-3xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-6">お問い合わせ</h1>
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="container max-w-3xl mx-auto px-4 py-12">
+          <h1 className="text-4xl font-bold mb-8 mt-12 text-center">お問い合わせ</h1>
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">お名前 <span className="text-red-500">*</span></label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">お名前 <span className="text-red-500">*</span></label>
               <Input
                 type="text"
                 id="name"
@@ -61,6 +62,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="パンダ太郎"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div>
@@ -98,7 +100,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">お問い合わせ内容 <span className="text-red-500">*</span></label>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">お問い合わせ内容 <span className="text-red-500">*</span></label>
               <Textarea
                 id="message"
                 name="message"
@@ -107,13 +109,17 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="お問い合わせ内容をご記入ください"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            <Button type="submit">送信</Button>
+            <Button type="submit" className="w-full">送信</Button>
           </form>
-          <Link href="/" className="mt-8 inline-block text-blue-600 hover:text-blue-800">
-            トップページに戻る
-          </Link>
+          <div className="text-center mt-12">
+            <Link href="/" className="inline-flex items-center px-4 py-2 text-black hover:bg-gray-100 rounded-full transition duration-300">
+              <ArrowLeft className="mr-2" size={20} />
+              トップページに戻る
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />
