@@ -38,6 +38,13 @@ export default function TailyLandingPageJp() {
 
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={`flex flex-col w-full min-h-screen bg-gray-50 text-gray-900 font-sans ${notoSansJP.className}`}>
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -53,15 +60,24 @@ export default function TailyLandingPageJp() {
               <span className="sr-only">taily</span>
             </Link>
             <nav className="hidden md:flex items-center space-x-4">
-              {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => (
-                <Link
-                  key={index}
-                  className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:text-gray-600"
-                  href={`${['#features', '#challenges', '#effects', '#case-studies', '#pricing', '#faq', '/contact'][index]}`}
-                >
-                  {item}
-                </Link>
-              ))}
+              {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => {
+                const href = ['#features', '#challenges', '#effects', '#case-studies', '#pricing', '#faq', '/contact'][index];
+                return (
+                  <Link
+                    key={index}
+                    className="text-sm font-semibold text-gray-700 px-3 py-2 rounded-md transition duration-300 ease-in-out hover:text-gray-600"
+                    href={href}
+                    onClick={(e) => {
+                      if (href.startsWith('#')) {
+                        e.preventDefault();
+                        scrollToSection(href.slice(1));
+                      }
+                    }}
+                  >
+                    {item}
+                  </Link>
+                );
+              })}
             </nav>
             <Button
               variant="ghost"
@@ -91,27 +107,25 @@ export default function TailyLandingPageJp() {
                 </Button>
               </div>
               <nav className="flex-1 px-4 space-y-2">
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#features" onClick={() => setIsMenuOpen(false)}>
-                  機能
-                </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#challenges" onClick={() => setIsMenuOpen(false)}>
-                  解決する課題
-                </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#effects" onClick={() => setIsMenuOpen(false)}>
-                  導入効果
-                </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#case-studies" onClick={() => setIsMenuOpen(false)}>
-                  ご相談事例
-                </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#pricing" onClick={() => setIsMenuOpen(false)}>
-                  料金
-                </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="#faq" onClick={() => setIsMenuOpen(false)}>
-                  よくあるご質問
-                </Link>
-                <Link className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" href="/contact" onClick={() => setIsMenuOpen(false)}>
-                  お問い合わせ
-                </Link>
+                {['機能', '解決する課題', '導入効果', 'ご相談事例', '料金', 'よくあるご質問', 'お問い合わせ'].map((item, index) => {
+                  const href = ['#features', '#challenges', '#effects', '#case-studies', '#pricing', '#faq', '/contact'][index];
+                  return (
+                    <Link
+                      key={index}
+                      className="block py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                      href={href}
+                      onClick={(e) => {
+                        if (href.startsWith('#')) {
+                          e.preventDefault();
+                          scrollToSection(href.slice(1));
+                        }
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      {item}
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
           </div>
@@ -263,7 +277,7 @@ export default function TailyLandingPageJp() {
                 {
                   icon: Rocket,
                   title: "利益率の向上",
-                  content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の利益率が向上します。平均して20%��上の利益率改善を実現しています。",
+                  content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の利益率が向上します。平均して20%上の利益率改善を実現しています。",
                   details: [
                     "高収益SKUの特定と在庫最適化",
                     "低収益SKUの改善または廃止",
@@ -404,7 +418,7 @@ export default function TailyLandingPageJp() {
                   title: "プロフェッショナルプラン",
                   price: "¥50,000/月",
                   features: [
-                    "スタータープランの全機能",
+                    "スタ��タープランの全機能",
                     "高度な利益最適化提案",
                     "在庫最適化",
                     "価格最適化",
@@ -467,7 +481,7 @@ export default function TailyLandingPageJp() {
                 {[
                   { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
                   { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行ます。連携可能な店舗数は、ご契約のプランによって異なります。" },
-                  { question: "データのセキュリティは大丈夫です？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
+                  { question: "データのセキュリティは大丈夫ですか？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                   { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
                   { question: "契約期間の縛りはありますか？", answer: "基本的に額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
                 ].map((item, index) => (
