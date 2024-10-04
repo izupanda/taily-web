@@ -143,11 +143,8 @@ export default function TailyLandingPageJp() {
                 </p>
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <Button className="w-full px-4 text-lg font-medium" size="lg">
+                <Button className="w-full px-1 text-lg font-medium" size="lg">
                   <Link href="/contact" className="py-2">お問い合わせはこちら</Link>
-                </Button>
-                <Button variant="outline">
-                  <Link href="/contact">お問い合わせはこちら</Link>
                 </Button>
               </motion.div>
             </div>
