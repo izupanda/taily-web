@@ -456,12 +456,12 @@ export default function TailyLandingPageJp() {
               ].map((plan, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full flex flex-col">
-                    <CardHeader className="p-6 md:p-8 pb-0"> {/* pb-2 から pb-0 に変更 */}
-                      <CardTitle className="text-2xl mb-1">{plan.title}</CardTitle>
-                      <p className="text-3xl font-bold">{plan.price}</p>
+                    <CardHeader className="p-6 md:p-8 pb-0">
+                      <CardTitle className="text-2xl mb-0">{plan.title}</CardTitle>
+                      <p className="text-3xl font-bold mt-0">{plan.price}</p>
                     </CardHeader>
-                    <CardContent className="p-6 md:p-8 pt-4 flex-grow"> {/* pt-0 に変更 */}
-                      <ul className="mt-0 space-y-3"> {/* mt-2 から mt-0 に変更 */}
+                    <CardContent className="p-6 md:p-8 pt-4 flex-grow">
+                      <ul className="mt-0 space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
                             <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" />
@@ -487,7 +487,7 @@ export default function TailyLandingPageJp() {
         >
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">よくある質問</h2>
-            <div className="max-w-5xl mx-auto"> {/* max-w-3xl から max-w-4xl に変更 */}
+            <div className="max-w-5xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 {[
                   { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "tailyは最短即日での導入・利用開始が可能です。一般的には、1〜2週間程度で導入が完了し、データの初期設定、システム統合、基本的なユーザートレーニングを含みます。ただし、複雑な統合や大規模な導入の場合、2〜4週間程度かかることがあります。お客様の環境や特定の要件により期間は変動しますので、詳細は個別にご相談ください。" },
