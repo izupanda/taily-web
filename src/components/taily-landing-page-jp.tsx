@@ -157,7 +157,7 @@ export default function TailyLandingPageJp() {
                 </p>
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <Button className="w-full px-1 text-lg font-medium flex items-center justify-center" size="lg">
+                <Button className="w-full px-2 pb-2 text-lg font-medium flex items-center justify-center" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </motion.div>
@@ -423,7 +423,7 @@ export default function TailyLandingPageJp() {
                     "在庫最適化",
                     "価格最適化",
                     "週次レポート",
-                    "3ユーザーま",
+                    "3ユーザーまで",
                     "連携店舗数：最大5店舗",
                     "追加ユーザー：3,980円/月/ユーザー",
                     "チャットサポート付き"
@@ -479,7 +479,7 @@ export default function TailyLandingPageJp() {
             <div className="max-w-5xl mx-auto"> {/* max-w-3xl から max-w-4xl に変更 */}
               <Accordion type="single" collapsible className="w-full">
                 {[
-                  { question: "taily導入にはどのくらい時間がかかりますか？", answer: "通常、tailyの導入には2〜4週間程度かります。これには、データの初期設定、システム統合、ユーザートレーニングが含まれます。ただし、お客様の環境やニーズによって期間は変動する場合があります。" },
+                  { question: "tailyは最短即日での導入・利用開始が可能です。一般的には、1〜2週間程度で導入が完了し、データの初期設定、システム統合、基本的なユーザートレーニングを含みます。ただし、複雑な統合や大規模な導入の場合、2〜4週間程度かかることがあります。お客様の環境や特定の要件により期間は変動しますので、詳細は個別にご相談ください。" },
                   { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行ます。連携可能な店舗数は、ご契約のプランによって異なります。" },
                   { question: "データのセキュリティは大丈夫ですか？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
                   { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
@@ -510,13 +510,13 @@ export default function TailyLandingPageJp() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">お問い合わせ</h2>
-                <p className="mx-auto max-w-[700px] text-sm sm:text-base text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400 mb-20">
+                <p className="mx-auto max-w-[700px] text-sm sm:text-base text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400 mb-24">
                   tailyについてのご質問や導入のご相談は、お気軽にお問い合わせください。<br />
                   専門のメンバーが丁寧にご相談に乗らせていただきます。
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full px-1 text-lg font-medium flex items-center justify-center" size="lg">
+                <Button className="w-full px-2 pb-2text-lg font-medium flex items-center justify-center" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
