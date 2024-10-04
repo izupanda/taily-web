@@ -49,11 +49,14 @@ export default function Contact() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <div className="container max-w-3xl mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold mb-8 mt-12 text-center">お問い合わせ</h1>
+        <div className="container max-w-2xl mx-auto px-4 py-12">
+          <h1 className="text-4xl font-bold mb-8 mt-16 text-center">お問い合わせ</h1>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">お名前 <span className="text-red-500">*</span></label>
+              <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                お名前
+                <span className="ml-2 text-xs font-medium text-white bg-red-500 rounded-full px-2 py-1">必須</span>
+              </label>
               <Input
                 type="text"
                 id="name"
@@ -66,7 +69,10 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700">会社名</label>
+              <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
+                会社名
+                <span className="ml-2 text-xs font-medium text-white bg-gray-400 rounded-full px-2 py-1">任意</span>
+              </label>
               <Input
                 type="text"
                 id="company"
@@ -74,10 +80,14 @@ export default function Contact() {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="株式会社パンダ"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">メールアドレス <span className="text-red-500">*</span></label>
+              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                メールアドレス
+                <span className="ml-2 text-xs font-medium text-white bg-red-500 rounded-full px-2 py-1">必須</span>
+              </label>
               <Input
                 type="email"
                 id="email"
@@ -86,10 +96,14 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="support@pandalab.jp"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">電話番号</label>
+              <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                電話番号
+                <span className="ml-2 text-xs font-medium text-white bg-gray-400 rounded-full px-2 py-1">任意</span>
+              </label>
               <Input
                 type="tel"
                 id="phone"
@@ -97,10 +111,14 @@ export default function Contact() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="070-0000-0000"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">お問い合わせ内容 <span className="text-red-500">*</span></label>
+              <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                お問い合わせ内容
+                <span className="ml-2 text-xs font-medium text-white bg-red-500 rounded-full px-2 py-1">必須</span>
+              </label>
               <Textarea
                 id="message"
                 name="message"
