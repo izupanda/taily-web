@@ -4,18 +4,19 @@ import React from 'react'
 import Link from 'next/link'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ArrowLeft } from 'lucide-react'
 
 export default function Tokushoho() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <div className="container max-w-3xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-6 text-center">特定商取引法に基づく表示</h1>
-          <div className="space-y-6">
+        <div className="container max-w-3xl mx-auto px-4 py-12">
+          <h1 className="text-3xl font-bold mb-8 mt-12 text-center">特定商取引法に基づく表示</h1>
+          <div className="space-y-6 mb-12">
             <section>
               <h2 className="text-xl font-semibold mb-2">事業者の名称</h2>
-              <p>株式会社Panda Lab</p>
+              <p className="text-sm leading-relaxed">株式会社Panda Lab</p>
             </section>
 
             <section>
@@ -35,7 +36,9 @@ export default function Tokushoho() {
 
             <section>
               <h2 className="text-xl font-semibold mb-2">メールアドレス</h2>
-              <p><a href="mailto:taily@pandalab.jp" className="text-blue-600 hover:underline">taily@pandalab.jp</a></p>
+              <p className="text-sm leading-relaxed">
+                <a href="mailto:taily@pandalab.jp" className="text-black underline hover:text-gray-600">taily@pandalab.jp</a>
+              </p>
             </section>
 
             <section>
@@ -75,9 +78,12 @@ export default function Tokushoho() {
 
             <p className="mt-6 text-sm text-gray-600">2024年10月04日 制定</p>
           </div>
-          <Link href="/" className="mt-8 inline-block text-blue-600 hover:text-blue-800">
-            トップページに戻る
-          </Link>
+          <div className="text-center">
+            <Link href="/" className="inline-flex items-center px-4 py-2 text-black hover:bg-gray-100 rounded-full transition duration-300">
+              <ArrowLeft className="mr-2" size={20} />
+              トップページに戻る
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />

@@ -4,19 +4,20 @@ import React from 'react'
 import Link from 'next/link'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ArrowLeft } from 'lucide-react'
 
 export default function PrivacyPolicy() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <div className="container max-w-3xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-6 text-center">プライバシーポリシー</h1>
-          <div className="space-y-6">
+        <div className="container max-w-3xl mx-auto px-4 py-12">
+          <h1 className="text-3xl font-bold mb-8 mt-12 text-center">プライバシーポリシー</h1>
+          <div className="space-y-6 mb-12">
             <section>
               <h2 className="text-2xl font-semibold mb-3">お客様から取得する情報</h2>
-              <p className="mb-2">当社は、お客様から以下の情報を取得します。</p>
-              <ul className="list-disc list-inside space-y-1 ml-4">
+              <p className="text-sm leading-relaxed mb-2">当社は、お客様から以下の情報を取得します。</p>
+              <ul className="list-disc list-inside space-y-1 ml-4 text-sm leading-relaxed">
                 <li>氏名(ニックネームやペンネームも含む)</li>
                 <li>年齢または生年月日</li>
                 <li>性別</li>
@@ -31,8 +32,8 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">お客様の情報を利用する目的</h2>
-              <p className="mb-2">当社は、お客様から取得した情報を、以下の目的のために利用します。</p>
-              <ul className="list-disc list-inside space-y-1 ml-4">
+              <p className="text-sm leading-relaxed mb-2">当社は、お客様から取得した情報を、以下の目的のために利用します。</p>
+              <ul className="list-disc list-inside space-y-1 ml-4 text-sm leading-relaxed">
                 <li>当社サービスに関する登録の受付、お客様の本人確認、認証のため</li>
                 <li>お客様の当社サービスの利用履歴を管理するため</li>
                 <li>利用料金の決済のため</li>
@@ -48,14 +49,14 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">安全管理のために講じた措置</h2>
-              <p>当社が、お客様から取得した情報に関して安全管理のために講じた措置につきましては、末尾記載のお問い合わせ先にご連絡をいただきましたら、法令の定めに従い個別にご回答させていただきます。</p>
+              <p className="text-sm leading-relaxed">当社が、お客様から取得した情報に関して安全管理のために講じた措置につきましては、末尾記載のお問い合わせ先にご連絡をいただきましたら、法令の定めに従い個別にご回答させていただきます。</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">第三者提供</h2>
-              <p className="mb-2">当社は、お客様から取得する情報のうち、個人データ（個人情報保護法第１６条第３項）に該当するものついては、あらかじめお客様の同意を得ずに、第三者（日本国外にある者を含みます。）に提供しません。</p>
-              <p className="mb-2">但し、次の場合は除きます。</p>
-              <ul className="list-disc list-inside space-y-1 ml-4">
+              <p className="text-sm leading-relaxed mb-2">当社は、お客様から取得する情報のうち、個人データ（個人情報保護法第１６条第３項）に該当するものついては、あらかじめお客様の同意を得ずに、第三者（日本国外にある者を含みます。）に提供しません。</p>
+              <p className="text-sm leading-relaxed mb-2">但し、次の場合は除きます。</p>
+              <ul className="list-disc list-inside space-y-1 ml-4 text-sm leading-relaxed">
                 <li>個人データの取扱いを外部に委託する場合</li>
                 <li>当社や当社サービスが買収された場合</li>
                 <li>事業パートナーと共同利用する場合（具体的な共同利用がある場合は、その内容を別途公表します。）</li>
@@ -65,34 +66,37 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">アクセス解析ツール</h2>
-              <p className="mb-2">当社は、お客様のアクセス解析のために、「Googleアナリティクス」を利用しています。Googleアナリティクスは、トラフィックデータの収集のためにCookieを使用しています。トラフィックデータは匿名で収集されており、個人を特定するものではありません。Cookieを無効にすれば、これらの情報の収集を拒否することができます。詳しくはお使いのブラウザの設定をご確認ください。</p>
-              <p>Googleアナリティクスについて、詳しくは以下からご確認ください。</p>
-              <a href="https://marketingplatform.google.com/about/analytics/terms/jp/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://marketingplatform.google.com/about/analytics/terms/jp/</a>
+              <p className="text-sm leading-relaxed mb-2">当社は、お客様のアクセス解析のために、「Googleアナリティクス」を利用しています。Googleアナリティクスは、トラフィックデータの収集のためにCookieを使用しています。トラフィックデータは匿名で収集されており、個人を特定するものではありません。Cookieを無効にすれば、これらの情報の収集を拒否することができます。詳しくはお使いのブラウザの設定をご確認ください。</p>
+              <p className="text-sm leading-relaxed">Googleアナリティクスについて、詳しくは以下からご確認ください。</p>
+              <a href="https://marketingplatform.google.com/about/analytics/terms/jp/" className="text-black underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">https://marketingplatform.google.com/about/analytics/terms/jp/</a>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">プライバシーポリシーの変更</h2>
-              <p>当社は、必要に応じて、このプライバシーポリシーの内容を変更します。この場合、変更後のプライバシーポリシーの施行時期と内容を適切な方法により周知または通知します。</p>
+              <p className="text-sm leading-relaxed">当社は、必要に応じて、このプライバシーポリシーの内容を変更します。この場合、変更後のプライバシーポリシーの施行時期と内容を適切な方法により周知または通知します。</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">お問い合わせ</h2>
-              <p className="mb-2">お客様の情報の開示、情報の訂正、利用停止、削除をご希望の場合は、以下のメールアドレスにご連絡ください。</p>
-              <p className="mb-2">e-mail: <a href="mailto:taily@pandalab.jp" className="text-blue-600 hover:underline">taily@pandalab.jp</a></p>
-              <p className="mb-2">この場合、必ず、運転免許証のご提示等当社が指定する方法により、ご本人からのご請求であることの確認をさせていただきます。なお、情報の開示請求については、開示の有無に関わらず、ご申請時に一件あたり1,000円の事務手数料を申し受けます。</p>
+              <p className="text-sm leading-relaxed mb-2">お客様の情報の開示、情報の訂正、利用停止、削除をご希望の場合は、以下のメールアドレスにご連絡ください。</p>
+              <p className="text-sm leading-relaxed mb-2">e-mail: <a href="mailto:taily@pandalab.jp" className="text-black underline hover:text-gray-600">taily@pandalab.jp</a></p>
+              <p className="text-sm leading-relaxed mb-2">この場合、必ず、運転免許証のご提示等当社が指定する方法により、ご本人からのご請求であることの確認をさせていただきます。なお、情報の開示請求については、開示の有無に関わらず、ご申請時に一件あたり1,000円の事務手数料を申し受けます。</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">事業者情報</h2>
-              <p>事業者の名称: 株式会社Panda Lab</p>
-              <p>代表者氏名: 山本泉</p>
-              <p>事業者の住所: 東京都港区芝大門1-6-6</p>
-              <p className="mt-4">2024年10月04日 制定</p>
+              <p className="text-sm leading-relaxed">事業者の名称: 株式会社Panda Lab</p>
+              <p className="text-sm leading-relaxed">代表者氏名: 山本泉</p>
+              <p className="text-sm leading-relaxed">事業者の住所: 東京都港区芝大門1-6-6</p>
+              <p className="mt-4 text-sm leading-relaxed">2024年10月04日 制定</p>
             </section>
           </div>
-          <Link href="/" className="mt-8 inline-block text-blue-600 hover:text-blue-800">
-            トップページに戻る
-          </Link>
+          <div className="text-center">
+            <Link href="/" className="inline-flex items-center px-4 py-2 text-black hover:bg-gray-100 rounded-full transition duration-300">
+              <ArrowLeft className="mr-2" size={20} />
+              トップページに戻る
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />
