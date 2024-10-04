@@ -157,9 +157,14 @@ export default function TailyLandingPageJp() {
                 </p>
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <Button className="w-full px-2 pb-2 text-lg font-medium flex items-center justify-center" size="lg">
-                  <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
-                </Button>
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button asChild>
+                    <Link href="#features" onClick={scrollToFeatures}>
+                      詳細を見る
+                    </Link>
+                  </Button>
+                  <Button variant="outline">お問い合わせ</Button>
+                </div>
               </motion.div>
             </div>
             <motion.div
@@ -516,7 +521,7 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full px-2 pb-2text-lg font-medium flex items-center justify-center" size="lg">
+                <Button className="w-full px-2 pb-2 text-lg font-medium flex items-center justify-center" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
