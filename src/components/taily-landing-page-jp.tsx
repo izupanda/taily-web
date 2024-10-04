@@ -143,8 +143,8 @@ export default function TailyLandingPageJp() {
                 </p>
               </motion.div>
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <Button className="w-full px-1 text-lg font-medium" size="lg">
-                  <Link href="/contact" className="py-2">お問い合わせはこちら</Link>
+                <Button className="w-full px-1 text-lg font-medium flex items-center justify-center" size="lg">
+                  <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </motion.div>
             </div>
@@ -502,8 +502,8 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full px-4 text-lg font-medium" size="lg">
-                  <Link href="/contact" className="py-2">お問い合わせはこちら</Link>
+                <Button className="w-full px-1 text-lg font-medium flex items-center justify-center" size="lg">
+                  <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
             </div>
@@ -515,23 +515,23 @@ export default function TailyLandingPageJp() {
           <div className="flex flex-col sm:flex-row justify-between items-center py-6">
             <p className="text-xs text-gray-500">© 2024 株式会社Panda Lab All rights reserved.</p>
             <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
-              <Link 
-                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400 flex items-center" 
-                href="https://pandalab.jp/" 
-                target="_blank" 
+              <Link
+                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400 flex items-center"
+                href="https://pandalab.jp/"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 運営会社
                 <ExternalLink className="ml-1 w-3 h-3" />
               </Link>
-              <Link 
-                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400" 
+              <Link
+                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400"
                 href="/tokushoho"
               >
                 特定商取引法に基づく表記
               </Link>
-              <Link 
-                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400" 
+              <Link
+                className="text-xs text-gray-700 transition-colors duration-200 hover:text-gray-400"
                 href="/privacy-policy"
               >
                 プライバシーポリシー
