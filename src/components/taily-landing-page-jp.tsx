@@ -457,8 +457,8 @@ export default function TailyLandingPageJp() {
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full flex flex-col">
                     <CardHeader className="p-6 md:p-8 pb-0">
-                      <CardTitle className="text-2xl mb-0">{plan.title}</CardTitle>
-                      <p className="text-3xl font-bold mt-0">{plan.price}</p>
+                      <CardTitle className="text-2xl">{plan.title}</CardTitle>
+                      <p className="text-3xl font-bold">{plan.price}</p>
                     </CardHeader>
                     <CardContent className="p-6 md:p-8 pt-4 flex-grow">
                       <ul className="mt-0 space-y-3">
@@ -527,7 +527,7 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full mt-2 px-4 text-lg font-medium flex items-center justify-center" size="lg">
+                <Button className="w-full mt-8 px-4 text-lg font-medium flex items-center justify-center" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
