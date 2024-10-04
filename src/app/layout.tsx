@@ -14,8 +14,13 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "taily｜中小ECの利益を最大化する",
+  title: "taily - 中小ECのための経営羅針盤",
   description: "tailyは、年商数千万円から15億円程度のEC事業者様向けに開発されたSKU別利益分析ツールです。",
+  icons: [
+    { rel: "icon", url: "/taily-logo.ico" },
+    { rel: "icon", url: "/taily-logo.svg", type: "image/svg+xml" },
+    { rel: "apple-touch-icon", url: "/taily-logo.svg" },
+  ],
 };
 
 export default function RootLayout({
@@ -24,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
