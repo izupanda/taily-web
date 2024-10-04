@@ -214,7 +214,7 @@ export default function TailyLandingPageJp() {
                 { icon: Database, title: "SKU別の利益が不明確", content: "現在のシステムでは売上や粗利は把握できても、SKU別の最終的な利益（着地利益）を正確に追跡するこができず、真の収益性が見えていません。" },
                 { icon: Target, title: "価格戦略の最適化が困難", content: "競合との価格競争に巻き込まれ、各SKUの利益を考慮した適切な価格設定ができていません。結果として、全体の利益率が低下し、持続能な成長が阻害されています。" },
                 { icon: Briefcase, title: "在庫管理の非率", content: "SKU別の在庫回転率利の関連性が見えづらく、過剰在庫による資金の固定化や、欠品によるビジネス機会の損失が頻繁に発生しています。" },
-                { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモー��ョンの効果を、売上だけなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
+                { icon: BarChart3, title: "マーケティング効果の測定が不十分", content: "広告やプロモーョンの効果を、売上だけなく利益の観点から正確に評価できていません。これにより、効果的なマーケティング戦略の立案や予算配分の最適化が困難です。" },
                 { icon: TrendingUp, title: "経営判断のスピード不足", content: "リアルタイムのデータ分析が困難なため、市場の変化や顧客ニーズの変化に迅速に対応できず、ビジネスチャンスを逃しています。" }
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
@@ -250,7 +250,7 @@ export default function TailyLandingPageJp() {
                 { icon: BarChart3, title: "SKU別利益分析", content: "各SKUの最終利益を詳細に分析し、収益性の高い商品を特定。利益最大化の基盤を構築します。" },
                 { icon: TrendingUp, title: "経営指標の一管理", content: "重要な財務・業績指標を自動収集し、経営視点での一元管理を実現。意思決定の質とスピードを向上させます。" },
                 { icon: DollarSign, title: "利益最適化提案", content: "データ分析に基づいて、利益を最大化するための具体的な改善策を提案。成長戦略の立案をサポートします。" },
-                { icon: PieChart, title: "在庫最適化", content: "SKU別の在庫回転率と利益を連動して分析し、最適な在庫水準を提案。過剰�����と欠品リスクを最小化します。" },
+                { icon: PieChart, title: "在庫最適化", content: "SKU別の在庫回転率と利益を連動して分析し、最適な在庫水準を提案。過剰と欠品リスクを最小化します。" },
                 { icon: LineChart, title: "価格最適化", content: "SKU別の価格弾力性を分析し、利益を最大化する最適な価格設定を提案。競争力を維持しながら収益を向上させます。" },
                 { icon: Zap, title: "リアルタイムアラート", content: "重要な指が設定ししきい値を超えた場合、即時にアラートを通知。迅速な対応で機会損失を防ぎます。" }
               ].map((item, index) => (
@@ -365,13 +365,13 @@ export default function TailyLandingPageJp() {
                 {
                   title: "季節商品の在庫30%削減",
                   tagline: "アパレルEC / 売上高8億円",
-                  content: "季節品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
+                  content: "季節品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるように��りました。",
                   image: "/client2.svg"
                 },
                 {
                   title: "適正価格設定で売上20%増",
                   tagline: "生活雑貨EC / 売上高5億円",
-                  content: "競合との価格競争で利益率が低下していましたが、tailyの価格最適化機能を活用し、SKU別の適正価格を設定。結果、利益率を維持しながら���上を20%増加させることができました。",
+                  content: "競合との価格競争で利益率が低下していましたが、tailyの価格最適化機能を活用し、SKU別の適正価格を設定。結果、利益率を維持しながら売上を20%増加させることができました。",
                   image: "/client3.svg"
                 }
               ].map((item, index) => (
@@ -432,7 +432,7 @@ export default function TailyLandingPageJp() {
                   price: "¥50,000/月",
                   features: [
                     "スタータープランの全機能",
-                    "���度な利益最適化提案",
+                    "度な利益最適化提案",
                     "在庫最適化",
                     "価格最適化",
                     "週次レポート",
@@ -462,8 +462,8 @@ export default function TailyLandingPageJp() {
                       <CardTitle className="text-2xl">{plan.title}</CardTitle>
                       <p className="text-3xl font-bold mt-2">{plan.price}</p>
                     </CardHeader>
-                    <CardContent className="p-6 md:p-8 pt-4 flex-grow">
-                      <ul className="mt-0 space-y-3">
+                    <CardContent className="p-6 md:p-8 pt-0 flex-grow">
+                      <ul className="mt-4 space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm">
                             <CheckCircle className="w-5 h-5 mr-4 text-primary flex-shrink-0" />
@@ -529,7 +529,7 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full mt-8 px-4 text-base font-semibold flex items-center justify-center pb-2" size="lg">
+                <Button className="w-full mt-8 px-4 text-base font-semibold flex items-center justify-center pt-2 pb-2" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
