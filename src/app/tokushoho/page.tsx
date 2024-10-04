@@ -11,7 +11,7 @@ export default function Tokushoho() {
       <Header />
       <main className="flex-grow">
         <div className="container max-w-3xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-6">特定商取引法に基づく表示</h1>
+          <h1 className="text-3xl font-bold mb-6 text-center">特定商取引法に基づく表示</h1>
           <div className="space-y-6">
             <section>
               <h2 className="text-xl font-semibold mb-2">事業者の名称</h2>

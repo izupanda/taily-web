@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
       <Header />
       <main className="flex-grow">
         <div className="container max-w-3xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-6">プライバシーポリシー</h1>
+          <h1 className="text-3xl font-bold mb-6 text-center">プライバシーポリシー</h1>
           <div className="space-y-6">
             <section>
               <h2 className="text-2xl font-semibold mb-3">お客様から取得する情報</h2>
