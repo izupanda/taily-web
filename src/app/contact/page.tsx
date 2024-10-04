@@ -37,7 +37,7 @@ export default function Contact() {
         alert('お問い合わせを受け付けました')
         setFormData({ name: '', company: '', email: '', phone: '', message: '' })
       } else {
-        throw new Error('送信に失敗���ました')
+        throw new Error('送信に失敗ました')
       }
     } catch (error) {
       console.error('エラー:', error)
@@ -55,7 +55,7 @@ export default function Contact() {
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                 お名前
-                <span className="ml-2 text-[10px] font-medium text-white bg-[#E94C32] rounded-full px-2 py-0.5">必須</span>
+                <span className="ml-2 text-[10px] font-semibold text-white bg-[#E94C32] rounded-full px-2 py-1">必須</span>
               </label>
               <Input
                 type="text"
@@ -71,7 +71,7 @@ export default function Contact() {
             <div>
               <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
                 会社名
-                <span className="ml-2 text-[10px] font-medium text-white bg-gray-400 rounded-full px-2 py-0.5">任意</span>
+                <span className="ml-2 text-[10px] font-semibold text-white bg-gray-400 rounded-full px-2 py-1">任意</span>
               </label>
               <Input
                 type="text"
@@ -86,7 +86,7 @@ export default function Contact() {
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                 メールアドレス
-                <span className="ml-2 text-[10px] font-medium text-white bg-[#E94C32] rounded-full px-2 py-0.5">必須</span>
+                <span className="ml-2 text-[10px] font-semibold text-white bg-[#E94C32] rounded-full px-2 py-1">必須</span>
               </label>
               <Input
                 type="email"
@@ -102,7 +102,7 @@ export default function Contact() {
             <div>
               <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
                 電話番号
-                <span className="ml-2 text-[10px] font-medium text-white bg-gray-400 rounded-full px-2 py-0.5">任意</span>
+                <span className="ml-2 text-[10px] font-semibold text-white bg-gray-400 rounded-full px-2 py-1">任意</span>
               </label>
               <Input
                 type="tel"
@@ -117,7 +117,7 @@ export default function Contact() {
             <div>
               <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                 お問い合わせ内容
-                <span className="ml-2 text-[10px] font-medium text-white bg-[#E94C32] rounded-full px-2 py-0.5">必須</span>
+                <span className="ml-2 text-[10px] font-semibold text-white bg-[#E94C32] rounded-full px-2 py-1">必須</span>
               </label>
               <Textarea
                 id="message"
