@@ -159,7 +159,13 @@ export default function TailyLandingPageJp() {
               <motion.div className="space-x-4" variants={fadeInUp} transition={{ duration: 0.6 }}>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Button asChild>
-                    <Link href="#features" onClick={scrollToFeatures}>
+                    <Link
+                      href="#features"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('features');
+                      }}
+                    >
                       詳細を見る
                     </Link>
                   </Button>
