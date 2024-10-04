@@ -493,7 +493,7 @@ export default function TailyLandingPageJp() {
                   { question: "tailyの導入にはどのくらいの時間がかかりますか？", answer: "tailyは最短即日での導入・利用開始が可能です。一般的には、1〜2週間程度で導入が完了し、データの初期設定、システム統合、基本的なユーザートレーニングを含みます。ただし、複雑な統合や大規模な導入の場合、2〜4週間程度かかることがあります。お客様の環境や特定の要件により期間は変動しますので、詳細は個別にご相談ください。" },
                   { question: "既存のECプラットフォームと連携できますか？", answer: "はい、tailyは主要なECプラットフォーム（Shopify、楽天市場、Amazon等）と連携可能です。データを自動的に取り込み、分析を行ます。連携可能な店舗数は、ご契約のプランによって異なります。" },
                   { question: "データのセキュリティは大丈夫ですか？", answer: "tailyは最高水準のセキュリティ対策を実施しています。すべてのデータは暗号化され、定期的なセキュリティ監査を行っています。また、ISO 27001認証を取得しており、お客様のデータを安全に管理しています。" },
-                  { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。エンタープライズプランでは、さらに専任のサポート担当者がつきます。サポート時間は平日9:00〜18:00となっています。" },
+                  { question: "カスタマーサポートはどのように提供されますか？", answer: "すべてのプランにチャットによるカスタマーサポートが含まれています。" },
                   { question: "契約期間の縛りはありますか？", answer: "基本的に額契約となっており、最低契約期間は3ヶ月です。長期契約（1年以上）の場合、割引が適用されます。詳細はお問い合わせください。" }
                 ].map((item, index) => (
                   <AccordionItem key={index} value={`item-${index + 1}`}>
@@ -527,7 +527,7 @@ export default function TailyLandingPageJp() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full px-2 pb-2 text-lg font-medium flex items-center justify-center" size="lg">
+                <Button className="w-full mt-20 px-4 text-lg font-medium flex items-center justify-center" size="lg">
                   <Link href="/contact" className="py-0">お問い合わせはこちら</Link>
                 </Button>
               </div>
