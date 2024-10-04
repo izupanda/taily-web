@@ -496,7 +496,7 @@ export default function TailyLandingPageJp() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">お問い合わせ</h2>
-                <p className="mx-auto max-w-[700px] text-sm sm:text-base text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400 mb-16">
+                <p className="mx-auto max-w-[700px] text-sm sm:text-base text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400 mb-20">
                   tailyについてのご質問や導入のご相談は、お気軽にお問い合わせください。<br />
                   専門のメンバーが丁寧にご相談に乗らせていただきます。
                 </p>
