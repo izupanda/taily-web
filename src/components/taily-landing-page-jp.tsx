@@ -365,7 +365,7 @@ export default function TailyLandingPageJp() {
                 {
                   title: "季節商品の在庫30%削減",
                   tagline: "アパレルEC / 売上高8億円",
-                  content: "季節品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるように��りました。",
+                  content: "季節品の在庫管理に苦心していましたが、tailyの在庫最適化機能により、過剰在庫を30%削減。キャッシュフローが改善し、新商品開発に投資できるようになりました。",
                   image: "/client2.svg"
                 },
                 {
@@ -377,7 +377,7 @@ export default function TailyLandingPageJp() {
               ].map((item, index) => (
                 <motion.div key={index} variants={fadeInUp} className="flex" transition={{ duration: 0.6 }}>
                   <Card className="w-full">
-                    <CardHeader>
+                    <CardHeader className="mb-0 pb-0">
                       <div className="flex items-center space-x-4">
                         <Image
                           src={item.image}
