@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer'
 export async function POST(request: Request) {
   const { name, company, email, phone, message } = await request.json()
 
-  // トランスポーターの設定
+  // Configure the email transporter
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || '587'),
@@ -15,13 +15,13 @@ export async function POST(request: Request) {
   })
 
   try {
-    // メール送信
+    // Send the email
     await transporter.sendMail({
-      from: process.env.MAIL_FROM,
-      to: process.env.MAIL_TO,
-      subject: 'お問い合わせがありました',
+      from: email, // Sender's email
+      to: 'contact@taily.jp', // Destination email
+      subject: `お問い合わせ: ${name}`,
       text: `
-        名前: ${name}
+        お名前: ${name}
         会社名: ${company}
         メールアドレス: ${email}
         電話番号: ${phone}

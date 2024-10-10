@@ -24,24 +24,24 @@ export default function Contact() {
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      const response = await fetch('/api/contact', {  // URLは変更なし
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-      })
+      });
       if (response.ok) {
-        alert('お問い合わせを受け付けました')
-        setFormData({ name: '', company: '', email: '', phone: '', message: '' })
+        alert('お問い合わせを受け付けました');
+        setFormData({ name: '', company: '', email: '', phone: '', message: '' });
       } else {
-        throw new Error('送信に失敗ました')
+        throw new Error('送信に失敗しました');
       }
     } catch (error) {
-      console.error('エラー:', error)
-      alert('エラーが発生しました。もう一度お試しください。')
+      console.error('エラー:', error);
+      alert('エラーが発生しました。もう一度お試しください。');
     }
   }
 
