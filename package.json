@@ -2,7 +2,6 @@
   "name": "202410_taily-teaserweb",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev -p 3004",
     "build": "next build",
