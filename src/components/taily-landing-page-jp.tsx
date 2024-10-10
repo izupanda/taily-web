@@ -163,7 +163,7 @@ export default function TailyLandingPageJp() {
                       href="#features"
                       onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection('features');
+                        scrollToSection('contact'); 
                       }}
                     >
                       先行予約をする
@@ -290,7 +290,7 @@ export default function TailyLandingPageJp() {
                 {
                   icon: Rocket,
                   title: "利益率の向上",
-                  content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の利益率が向上します。平均して20%上の利益率改善を実現しています。",
+                  content: "SKU別の利益分析により、高収益商品に注力し、低収益商品を改善または廃止することで、全体の���益率が向上します。平均して20%上の利益率改善を実現しています。",
                   details: [
                     "高収益SKUの特定と在庫最適化",
                     "低収益SKUの改善または廃止",
