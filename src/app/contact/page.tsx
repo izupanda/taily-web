@@ -64,7 +64,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="パンダ太郎"
+                placeholder="テイリー太郎"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -79,7 +79,7 @@ export default function Contact() {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                placeholder="株式会社パンダ"
+                placeholder="株式会社taily"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -95,7 +95,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="support@pandalab.jp"
+                placeholder="contact@taily.jp"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -110,7 +110,7 @@ export default function Contact() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="070-0000-0000"
+                placeholder="080-0000-0000"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
